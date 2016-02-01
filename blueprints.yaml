@@ -1,0 +1,25 @@
+name: Cardinl Skeleton
+version: 0.0.1
+description: "A Grav Blog Skeleton featuring Cardinl, a masonry-style theme"
+icon: asterisk
+author:
+  name: Rob Miller
+  email: robmillerjones@gmail.com
+  url: robmillerjones.com
+homepage: https://github.com/robmillerjones
+keywords: cardinl, theme, skelton, blog, modern, fast, responsive, html5, css3, masonry
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool

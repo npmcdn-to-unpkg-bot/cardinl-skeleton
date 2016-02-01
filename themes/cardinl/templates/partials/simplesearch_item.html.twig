@@ -1,0 +1,21 @@
+<section class="search-row pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+
+    {% set banner = page.media.images|first %}
+    <div>
+
+        <div>
+            <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+        </div>
+        {% if banner %}
+        <div>
+            <a href="{{ page.url }}">{{ banner.cropZoom(1200, 400).html }}</a>
+        </div>
+        {% endif %}
+          <div>
+            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+        </div>
+        <p>{{ page.summary }}</p>
+
+        <hr />
+    </div>
+</section>

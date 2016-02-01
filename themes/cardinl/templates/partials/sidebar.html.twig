@@ -1,0 +1,38 @@
+{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+
+
+
+
+{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+
+
+   {% include 'partials/relatedpages.html.twig' %}
+
+
+{% endif %}
+
+{% if config.plugins.taxonomylist.enabled %}
+<nav class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+<div>
+    <h4>Tags</h4>
+    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+</div>
+</nav>
+{% endif %}
+
+<div class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+{% if config.plugins.feed.enabled %}
+<div>
+    <h4>Syndicate</h4>
+    <a class="button" href="{{ blog.url }}/blog.atom"><i class="fa fa-rss"></i> Atom 1.0</a>
+    <a class="button" href="{{ blog.url }}/blog.rss"><i class="fa fa-rss"></i> RSS</a>
+</div>
+{% endif %}
+{% if config.plugins.simplesearch.enabled %}
+<div>
+    <h4>SimpleSearch</h4>
+    {% include 'partials/simplesearch_searchbox.html.twig' %}
+</div>
+{% endif %}
+</div>

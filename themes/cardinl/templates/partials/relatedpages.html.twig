@@ -1,0 +1,17 @@
+
+    {% for related_path, score in related_pages %}
+        {% set related = grav['pages'].get(related_path) %}
+        {% if related %}
+            <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+                {% if config.plugins.relatedpages.show_score %}
+                    <span class="score">{{ score }}</span>
+                {% endif %}
+                <h2> Related Post:</h2>
+                <h3><a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a></h3>
+                {% set header_image_media = related.media.images|first %}
+                 {{ header_image_media.cropZoom(1200, 400).html }}
+                {{ related.content|truncate(350) }}
+                <p><a href="{{ related.url }}">[click here to read more]</a></p>
+            </aside>
+        {% endif %}
+    {% endfor %}

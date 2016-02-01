@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; }
+
+body {
+  height: 100%;
+  bottom: 0; }
+
+html {
+  height: 100%; }
+
+nav {
+  background-color: yellow; }
+
+header {
+  background-color: #CCFF00; }
+
+footer {
+  background-color: green; }
+
+section {
+  background-color: #FFCC00; }
+
+h1 {
+  background-color: #1111FF; }
+
+h2 {
+  background-color: #7777FF; }
+
+h3 {
+  background-color: #9999FF; }
+
+ul {
+  background-color: #F9DD99; }
+
+div {
+  background-color: #FFCCCC; }
+
+span {
+  background-color: #FFFFFF; }
+
+p {
+  background-color: #FFCCDD;
+  padding: 6px; }
+
+aside {
+  background-color: #DD00CC; }
+
+article {
+  background-color: #FFCC00; }
+
+.body {
+  margin-top: 14rem;
+  min-height: 100%; }
+  @media (min-width: 35.5em) {
+    .body {
+      margin-top: 9rem; } }
+  @media (min-width: 64em) {
+    .body {
+      margin-left: 12.5%;
+      margin-top: 0; } }
+
+.taskbar {
+  position: fixed;
+  min-height: 6rem;
+  max-height: 8rem;
+  width: 100%; }
+  @media (min-width: 64em) {
+    .taskbar {
+      height: 100%;
+      max-height: 100%; } }
+
+.left {
+  float: left;
+  display: block;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0; }
+
+.right {
+  float: right; }
+
+.bottom {
+  position: relative;
+  bottom: 0; }
+
+.card {
+  min-height: 150px;
+  max-height: 1000px;
+  float: top; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.rrssb-text {
+  visibility: hidden; }
+
+.rrssb-buttons {
+  box-sizing: border-box;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 282px;
+  min-width: 202px; }
+
+.rrssb-buttons:after {
+  clear: both; }
+
+.rrssb-buttons:after,
+.rrssb-buttons:before {
+  content: ' ';
+  display: table; }
+
+.rrssb-buttons li {
+  box-sizing: border-box;
+  float: left;
+  list-style: none;
+  width: 16%;
+  height: 82%;
+  margin: auto;
+  padding: 0 2px; }
+
+.rrssb-buttons li.rrssb-facebook a:hover {
+  background-color: #306199; }
+
+.rrssb-buttons li.rrssb-tumblr a:hover {
+  background-color: #32506d; }
+
+.rrssb-buttons li.rrssb-twitter a:hover {
+  background-color: #26c4f1; }
+
+.rrssb-buttons li.rrssb-googleplus a:hover {
+  background-color: #e93f2e; }
+
+.rrssb-buttons li.rrssb-reddit a:hover {
+  background-color: #8bbbe3; }
+
+.rrssb-buttons li.rrssb-pinterest a:hover {
+  background-color: #b81621; }
+
+.rrssb-buttons li a {
+  background-color: #8c8c8c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  height: 100%;
+  position: relative;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  width: 100%; }
+
+.rrssb-buttons li a .rrssb-icon {
+  display: block;
+  left: 0.75rem;
+  padding-top: 0.62rem;
+  position: absolute;
+  top: 0;
+  width: 0; }
+
+.rrssb-buttons li a .rrssb-icon svg {
+  height: 1.16rem;
+  width: 1.16rem; }
+
+.rrssb-buttons li a .rrssb-icon svg path {
+  fill: #FFFFFF; }
+
+/*# sourceMappingURL=main.css.map */

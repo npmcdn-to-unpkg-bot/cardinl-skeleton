@@ -1,0 +1,13 @@
+@mixin navbar {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        overflow:hidden;
+        > ul, li {
+                display:inline;
+                padding:0;
+                &:last-child{
+                margin-right:0px;
+                }
+        }
+}

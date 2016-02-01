@@ -1,0 +1,27 @@
+title: Cardinl: A Masonry Theme for Grav CMS
+author:
+  name:
+  email:
+blog:
+  route: ''
+metadata:
+    description: 'A Grav Skeleton Featuring the Cardinl Theme'
+taxonomies: [category,tag,month,author]
+
+owner:
+  name:
+  email:
+  description:
+  github:
+
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: ===
+
+blog:
+  route: '/blog'
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
