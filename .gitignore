@@ -1,5 +1,10 @@
 #Grav Specific
 .sass-cache
 #config/
-#accounts/*
-#data/*
+accounts/*
+!accounts/.*
+data/*
+!data/.*
+plugins/*
+!plugins/.*
+
