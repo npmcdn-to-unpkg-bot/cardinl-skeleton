@@ -13,24 +13,28 @@
 {% endif %}
 
 {% if config.plugins.taxonomylist.enabled %}
-<nav class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
-<div>
+<nav class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 card item">
+<div class="content">
     <h4>Tags</h4>
-    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+    {% include 'partials/taxonomylist.html.twig' with {'base_url': base_url, 'taxonomy':'tag'} %}
+</div>
+<div class="content">
+      <h4>Secondary Navigation</h4>
+     {% include 'partials/navigation.html.twig' %}
 </div>
 </nav>
 {% endif %}
 
-<div class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+<div class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 card item">
 {% if config.plugins.feed.enabled %}
-<div>
+<div class="content">
     <h4>Syndicate</h4>
-    <a class="button" href="{{ blog.url }}/blog.atom"><i class="fa fa-rss"></i> Atom 1.0</a>
-    <a class="button" href="{{ blog.url }}/blog.rss"><i class="fa fa-rss"></i> RSS</a>
+    <a class="button" href="{{ blog.url }}.atom"><i class="fa fa-rss"></i> Atom 1.0</a>
+    <a class="button" href="{{ blog.url }}.rss"><i class="fa fa-rss"></i> RSS</a>
 </div>
 {% endif %}
 {% if config.plugins.simplesearch.enabled %}
-<div>
+<div class="content">
     <h4>SimpleSearch</h4>
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>

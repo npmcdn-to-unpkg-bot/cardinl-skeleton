@@ -2,7 +2,7 @@
     {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-            <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left item">
+            <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 content card item">
                 {% if config.plugins.relatedpages.show_score %}
                     <span class="score">{{ score }}</span>
                 {% endif %}

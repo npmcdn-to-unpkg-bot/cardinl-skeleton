@@ -2,7 +2,7 @@
 	{% block content %}
 	   {% for child in collection %}
 	   {% if not child.isFirst %}
-	   <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 left card item">
+	   <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 card item">
 	   	 <h4>Previous Post</h4>
 			{% include 'partials/card.html.twig' with {'page': child, 'truncate':true}%}
 	   </aside>
