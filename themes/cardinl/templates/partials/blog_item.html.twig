@@ -1,10 +1,8 @@
 <article class="list-item content">
-
     {% set header_image = page.header.header_image|defined(true) %}
     {% set header_image_width  = page.header.header_image_width|defined(1200) %}
     {% set header_image_height = page.header.header_image_height|defined(500) %}
     {% set header_image_file = page.header.header_image_file %}
-
     <div class="list-blog-header">
         {% if page.header.link %}
             <h2>
@@ -38,7 +36,6 @@
           </div>
         {% endif %}
     </div>
-
     <div class="list-blog-padding text">
     {% if page.header.continue_link is sameas(false) %}
         {{ page.content }}
@@ -52,9 +49,7 @@
         {% if page.summary != page.content %}
             {{ page.content|truncate(550) }}
         {% else %}
-
             {{ page.content }}
-
             {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
         {% endif %}
         <p><a href="{{ page.url }}">[click here to read more]</a></p>
@@ -62,11 +57,8 @@
         {{ page.content }}
         {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
         {% set show_prev_next = true %}
-
     {% endif %}
-
     {% if show_prev_next %}
-
         <p class="prev-next">
             {% if not page.isFirst %}
                 <a class="button" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Next Page</a>
@@ -77,6 +69,5 @@
             {% endif %}
         </p>
     {% endif %}
-
     </div>
 </article>
