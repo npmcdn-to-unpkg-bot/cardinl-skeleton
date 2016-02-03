@@ -43,19 +43,23 @@
         {% set show_prev_next = true %}
         {% endif %}
     {% elseif truncate and page.summary != page.content %}
-        {{ page.content }}
+        {{ page.summary }}
         <p><a href="{{ page.url }}">[click here to read more]</a></p>
     {% elseif truncate %}
         {% if page.summary != page.content %}
-            {{ page.content|truncate(550) }}
+            {{ page.content|truncate(350) }}
         {% else %}
             {{ page.content }}
-            {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+            {% if config.plugins.socialbuttons.enabled %}
+                 {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+            {% endif %}
         {% endif %}
         <p><a href="{{ page.url }}">[click here to read more]</a></p>
     {% else %}
         {{ page.content }}
-        {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+        {% if config.plugins.socialbuttons.enabled %}
+             {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+        {% endif %}
         {% set show_prev_next = true %}
     {% endif %}
     {% if show_prev_next %}

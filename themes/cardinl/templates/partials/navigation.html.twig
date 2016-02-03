@@ -23,7 +23,7 @@
             {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
             <li class="{{ current_page }}">
                 <a href="{{ page.url }}">
-                    {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
+                    {% if page.header.icon %}<i class="{{ page.header.icon }}"></i>{% endif %}
                     {{ page.menu }}
                 </a>
             </li>
@@ -32,20 +32,17 @@
     {% for mitem in site.menu %}
         <li>
             <a href="{{ mitem.url }}">
-                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                {% if mitem.icon %}<i class="{{ mitem.icon }}"></i>{% endif %}
                 {{ mitem.text }}
             </a>
         </li>
-    {% endfor %}    
-        {#Github icon#}
+    {% endfor %}
     {% if site.owner.github %}
        <li>
-        <a href="http://github.com/{{ site.owner.github }}" class="fa-stack fa-lg">
-                <i class="fa fa-github fa-stack-2x"></i>
+        <a href="http://github.com/{{ site.owner.github }}" class="">
+                <i class=""></i>
         </a>
-       </li> 
+       </li>
     {% endif %}
-    
-    
 </ul>
 
