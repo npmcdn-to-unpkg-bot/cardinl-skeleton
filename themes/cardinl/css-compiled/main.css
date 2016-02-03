@@ -7,8 +7,7 @@ html {
 
 body {
   height: 100%;
-  bottom: 0;
-  display: inline-block; }
+  bottom: 0; }
 
 img {
   max-width: 100%;
@@ -17,7 +16,9 @@ img {
 
 .body {
   margin-top: 14rem;
-  min-height: 100%; }
+  min-height: 100%;
+  float: right;
+  position: absolute; }
   @media (min-width: 35.5em) {
     .body {
       margin-top: 9rem; } }
@@ -47,7 +48,6 @@ img {
 
 .item {
   float: left;
-  display: inline-block;
   -webkit-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
   -moz-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
   -ms-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
@@ -56,7 +56,7 @@ img {
 
 @media (min-width: 48em) {
   .card {
-    max-width: 33.29%; } }
+    max-width: 33.28%; } }
 @media (min-width: 70em) {
   .card {
     max-width: 16.6%; } }
@@ -68,8 +68,7 @@ img {
   padding: 9px; }
 
 .side-footer {
-  display: none;
-  float: bottom; }
+  display: none; }
   @media (min-width: 70em) {
     .side-footer {
       display: block; } }
@@ -79,7 +78,6 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  float: bottom;
   margin-top: 1rem; }
   @media (min-width: 70em) {
     .bottom-footer {
@@ -89,7 +87,6 @@ img {
   visibility: hidden; }
 
 .rrssb-buttons {
-  box-sizing: border-box;
   height: 3rem;
   margin: 0;
   padding: 0;
@@ -106,7 +103,6 @@ img {
   display: table; }
 
 .rrssb-buttons li {
-  box-sizing: border-box;
   float: left;
   list-style: none;
   width: 16%;
@@ -114,22 +110,22 @@ img {
   margin: auto;
   padding: 0 2px; }
 
-.rrssb-buttons li.rrssb-facebook a:hover {
+.rrssb-buttons rrssb-facebook a:hover {
   background-color: #306199; }
 
-.rrssb-buttons li.rrssb-tumblr a:hover {
+.rrssb-buttons rrssb-tumblr a:hover {
   background-color: #32506d; }
 
-.rrssb-buttons li.rrssb-twitter a:hover {
+.rrssb-buttons rrssb-twitter a:hover {
   background-color: #26c4f1; }
 
-.rrssb-buttons li.rrssb-googleplus a:hover {
+.rrssb-buttons rrssb-googleplus a:hover {
   background-color: #e93f2e; }
 
-.rrssb-buttons li.rrssb-reddit a:hover {
+.rrssb-buttons rrssb-reddit a:hover {
   background-color: #8bbbe3; }
 
-.rrssb-buttons li.rrssb-pinterest a:hover {
+.rrssb-buttons rrssb-pinterest a:hover {
   background-color: #b81621; }
 
 .rrssb-buttons li a {
@@ -143,6 +139,8 @@ img {
   height: 100%;
   position: relative;
   -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out;
   transition: background-color .2s ease-in-out;
   width: 100%; }
 

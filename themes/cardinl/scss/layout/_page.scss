@@ -1,6 +1,8 @@
 .body{
 	margin-top: 14rem;
 	min-height:100%;
+	float:right;
+	position:absolute;
 	@media (min-width: 35.5em){
 	  margin-top: 9rem;
     }
@@ -31,28 +33,18 @@
 .right{
 	float:right;
 }
-.banner{
 
-}
-.menu{
-}
-.container{
-}
-.module{
-
-}
 .item{
 	float:left;
-	display:inline-block;
--webkit-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
--moz-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
--ms-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
--o-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -webkit-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -moz-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -ms-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -o-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
 }
 .card{
 	@media (min-width: 48em){
-     max-width:33.29%;
+     max-width:33.28%;
 	}
     @media (min-width: 70em){
      max-width:16.6%;
@@ -66,7 +58,6 @@ transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
 }
 .side-footer{
 	display:none;
-	float:bottom;
 	@media (min-width: 70em){
 	display:block;
 	}
@@ -76,7 +67,6 @@ transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
 	position: absolute;
 	bottom:0;
 	left:0;
-	float:bottom;
 	margin-top: 1rem;
 	@media (min-width: 70em){
 	display:none;

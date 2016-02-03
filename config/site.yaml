@@ -17,7 +17,7 @@ owner:
 summary:
   enabled: true
   format: short
-  size: 300
+  size: 500
   delimiter: ===
 
 blog:

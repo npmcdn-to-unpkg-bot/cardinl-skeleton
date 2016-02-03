@@ -4,7 +4,7 @@
 			<div id="listing" class="pure-u-1-1 pure-u-md-2-3 pure-u-xl-1-2 item">
 				{% for child in collection %}
 				 {% if child.isFirst %}
-			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':false} %}
 			        {% endif %}
 			    {% endfor %}
                 {% if config.plugins.pagination.enabled and collection.params.pagination %}
