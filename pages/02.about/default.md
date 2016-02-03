@@ -1,6 +1,19 @@
 ---
 title: About
-body_classes: 
+blog_url: about
+body_classes:
+
+sitemap:
+    changefreq: monthly
+    priority: 1.03
+
+
+
+feed:
+    description: blog at robmillerjones.com
+    limit: 5
+
+pagination: true
 ---
 
 

@@ -7,7 +7,8 @@ html {
 
 body {
   height: 100%;
-  bottom: 0; }
+  bottom: 0;
+  display: inline-block; }
 
 img {
   max-width: 100%;
@@ -45,11 +46,13 @@ img {
   float: right; }
 
 .item {
-  -webkit-transition: left .5s ease-in-out, bottom .5s ease-in-out .5s;
-  -moz-transition: left .5s ease-in-out, bottom .5s ease-in-out .5s;
-  -ms-transition: left .5s ease-in-out, bottom .5s ease-in-out .5s;
-  -o-transition: left .5s ease-in-out, bottom .5s ease-in-out .5s;
-  transition: left .5s ease-in-out, bottom .5s ease-in-out .5s; }
+  float: left;
+  display: inline-block;
+  -webkit-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+  -moz-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+  -ms-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+  -o-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+  transition: left .2s ease-in-out, bottom .2s ease-in-out .2s; }
 
 @media (min-width: 48em) {
   .card {

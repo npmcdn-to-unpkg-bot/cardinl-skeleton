@@ -10,4 +10,5 @@
     {% for page in search_results %}
         {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
     {% endfor %}
+    {% include 'partials/sidebar.html.twig'%}
 {% endblock %}

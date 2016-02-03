@@ -1,7 +1,7 @@
 ---
 title: Home
 blog_url: blog
-body_classes:
+body_classes: 
 
 sitemap:
     changefreq: monthly
