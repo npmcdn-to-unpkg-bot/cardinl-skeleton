@@ -1,11 +1,14 @@
-.right {
-  float: right; }
+* + * {
+  margin-top: 1.5em; }
+
+.content {
+  padding: 9px; }
 
 .list-item {
   max-width: 99.9%; }
 
-.content {
-  padding: 9px; }
+.right {
+  float: right; }
 
 html {
   box-sizing: border-box;
@@ -16,58 +19,68 @@ html {
 
 body {
   height: 100%;
-  bottom: 0; }
+  bottom: 0;
+  margin: 0 0 6rem;
+  /* bottom = footer height */ }
 
 img {
   max-width: 100%;
   height: auto;
   width: auto\9; }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  padding-bottom: 2rem; }
+
 .body {
   margin-top: 14rem;
   min-height: 100%;
   float: right;
   position: absolute; }
-  @media (min-width: 35.5em) {
-    .body {
-      margin-top: 14rem; } }
-  @media (min-width: 70em) {
-    .body {
-      margin-left: 12.5%;
-      margin-top: 0; } }
 
+@media (min-width: 70em) {
+  .body {
+    margin-top: 0;
+    margin-left: 12.5%; } }
 .side-footer {
-  display: none; }
-  @media (min-width: 70em) {
-    .side-footer {
-      display: block; } }
+  display: none;
+  z-index: 0; }
 
+@media (min-width: 70em) {
+  .side-footer {
+    display: block;
+    position: static;
+    padding-bottom: 2rem; } }
 .bottom-footer {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   margin-top: 1rem; }
-  @media (min-width: 70em) {
-    .bottom-footer {
-      display: none; } }
 
-.taskbar {
+@media (min-width: 70em) {
+  .bottom-footer {
+    display: none; } }
+.menubar {
   z-index: 5;
   position: fixed;
   min-height: 6rem;
   max-height: 8rem;
   width: 100%; }
-  .taskbar ul li {
+  .menubar ul li {
     display: inline;
     list-style: none; }
-  @media (min-width: 70em) {
-    .taskbar {
-      height: 100%;
-      max-height: 100%; }
-      .taskbar ul li {
-        display: block; } }
 
+@media (min-width: 70em) {
+  .menubar {
+    height: 100%;
+    max-height: 96%; }
+    .menubar ul li {
+      display: block; } }
 @media (min-width: 48em) {
   .card {
     max-width: 33.28%; } }
