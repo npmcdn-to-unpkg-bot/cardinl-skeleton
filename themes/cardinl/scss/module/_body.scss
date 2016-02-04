@@ -1,0 +1,13 @@
+.body{
+	margin-top: 14rem;
+	min-height:100%;
+	float:right;
+	position:absolute;
+	@media (min-width: 35.5em){
+	  margin-top: 14rem;
+    }
+	@media (min-width: 70em){
+	  margin-left: 12.5%;
+	  margin-top: 0;
+    }
+}

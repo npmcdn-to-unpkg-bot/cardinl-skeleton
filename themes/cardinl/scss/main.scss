@@ -1,28 +1,33 @@
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/placeholders';
-
-@import 'partials/navigation';
-@import 'partials/grid';
-@import 'partials/header';
-@import 'partials/footer';
-@import 'partials/sidebar';
-@import 'partials/forms';
-
-@import 'modules/buttons';
-@import 'modules/figures';
-
-@import 'pages/home';
-@import 'pages/about';
-
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/colors';
-@import 'base/base';
-@import 'base/custom';
 
 @import 'layout/page';
-@import 'vendor/rrssb'
+
+@import 'base/layout';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/placeholders';
+@import 'base/reset';
+
+
+@import 'module/navigation';
+@import 'module/body';
+@import 'module/header';
+@import 'module/footer';
+@import 'module/sidebar';
+@import 'module/forms';
+@import 'module/buttons';
+@import 'module/tables';
+@import 'module/taskbar';
+@import 'module/card';
+@import 'module/item';
+
+
+@import 'theme/typography';
+@import 'theme/colors';
+@import 'theme/variables';
+@import 'theme/custom';
+@import 'theme/rrssb';
+
+
+
 
 

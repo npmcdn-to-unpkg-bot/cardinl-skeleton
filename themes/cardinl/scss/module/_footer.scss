@@ -1,0 +1,16 @@
+.side-footer{
+	display:none;
+	@media (min-width: 70em){
+	display:block;
+	}
+}
+.bottom-footer{
+	display:block;
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-top: 1rem;
+	@media (min-width: 70em){
+	display:none;
+	}
+}

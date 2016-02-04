@@ -1,0 +1,8 @@
+.item{
+	float:left;
+    -webkit-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -moz-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -ms-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    -o-transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+    transition: left .2s ease-in-out, bottom .2s ease-in-out .2s;
+}
