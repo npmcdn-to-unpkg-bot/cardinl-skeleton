@@ -1,18 +1,13 @@
-.side-footer{
-	display:none;
-}
-@media (min-width: 70em){
-	.side-footer{
-	     display:block;
-    }
-}
-.bottom-footer{
 
+.bottom-footer{
 	margin-top: 6rem;
+	text-align: right;
+	padding-right: 1rem;
+	ul li{
+		display:inline;
+		list-style:none;
+		text-align: center;
+	}
 }
-@media (min-width: 70em){
-	.bottom-footer{
-	   display:none;
-    }
-}
+
 

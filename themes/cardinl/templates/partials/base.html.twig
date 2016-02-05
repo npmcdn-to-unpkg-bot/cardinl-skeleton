@@ -21,23 +21,21 @@
     {{ assets.css() }}
     {% block javascripts %}
         {% do assets.addJs('jquery',102) %}
-        {% do assets.addJs('theme://js/masonry.pkgd.min.js',101) %}
+        {% do assets.addJs('theme://js/isotope.pkgd.min.js',101) %}
         {% do assets.addJs('theme://js/modernizr-custom.js',100) %}
     {% endblock %}
     {{ assets.js()}}
 {% endblock head%}
 </head>
 <body class="pure-g">{% include 'partials/menu_bar.html.twig' %}
-        <div class="pure-u-1 pure-u-lg-21-24 body">
-            <div id="masonry" class="pure-g container">
-                   <div class="{{ page.header.body_classes }} item pure-u-1 content">
+        <div class="pure-u-1 pure-u-xl-5-6 body">
+            <div id="isotope" class="pure-g container">
+                   <div class="{{ page.header.body_classes }} item pure-u-1">
                         {% block content %}
                         {% endblock %}
                    </div>
                 {% block footer %}
-                <div class="bottom-footer">
                     {% include 'partials/footer.html.twig' %}
-                </div>
                 {% endblock %}
             </div>
         </div>
@@ -45,16 +43,20 @@
     <script>
     window.onload= function(){
         if(Modernizr.csstransitions){
-            $('#masonry').masonry({
+            $('#isotope').isotope({
             itemSelector: '.item',
-            columnWidth: 1,
+            masonry: {
+               columnWidth: 1
+             },
             percentPosition: true,
             transitionDuration: 0
             });
         }else {
-            $('#masonry').masonry({
+            $('#isotope').isotope({
             itemSelector: '.item',
-            columnWidth: 1,
+            masonry: {
+               columnWidth: 1
+             },
             percentPosition: true,
             transitionDuration: '.4s'
             });

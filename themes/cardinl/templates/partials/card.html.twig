@@ -1,4 +1,4 @@
-<div class="content">
+
 
     {% set header_image = page.header.header_image|defined(true) %}
     {% set header_image_width  = page.header.header_image_width|defined(1200) %}
@@ -18,49 +18,23 @@
             {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
         {% endif %}
         {% if page.header.link %}
-            {% if page.title.length > 24 %}
             <h4>
-                <a href="{{ page.header.link }}">{{ page.title|truncate(24)}}...</a>
+                <a href="{{ page.header.link }}">{{ page.title }}</a>
             </h4>
-            {% else %}
-            <h4>
-                <a href="{{ page.header.link }}">{{ page.title}}</a>
-            </h4>
-            {% endif %}
         {% else %}
-             {% if page.title.length > 24 %}
             <h4>
-                <a href="{{ page.url }}">{{ page.title|truncate(24)}}...</a>
+                <a href="{{ page.url }}">{{ page.title }}</a>
             </h4>
-            {% else %}
-            <h4>
-                <a href="{{ page.url }}">{{ page.title}}</a>
-            </h4>
-            {% endif %}
         {% endif %}
     </div>
 
     <div class="list-blog-padding text">
-    {% if page.header.continue_link is sameas(false) %}
-         {{ page.content|truncate(150) }}
-        {% if not truncate %}
-        {% set show_prev_next = false %}
-        {% endif %}
-    {% elseif truncate and page.summary != page.content %}
-         {{ page.content|truncate(150) }}
-        <p><a href="{{ page.url }}">[click here to read more]</a></p>
-    {% elseif truncate %}
-        {% if page.summary != page.content %}
-            {{ page.content|truncate(150) }}
-        {% else %}
-            {{ page.content|truncate(150) }}
-        {% endif %}
-        <p><a href="{{ page.url }}">[click here to read more]</a></p>
+    {% if page.summary%}
+         {{ page.summary }}
     {% else %}
-        {{ page.content|truncate(150) }}
-        {% set show_prev_next = false %}
-
+            {{ page.content|truncate(300) }}
     {% endif %}
+    <p><a href="{{ page.url }}">[click here to read more]</a></p>
 
     </div>
-</div>
+

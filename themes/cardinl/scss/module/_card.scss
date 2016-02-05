@@ -1,8 +1,19 @@
 .card{
-	@media (min-width: 48em){
-     max-width:33.28%;
-	}
-    @media (min-width: 70em){
-     max-width:16.6%;
+
+}
+@media (min-width: 35.5em){
+     .card{
+	     max-width:49.9%;
+     }
+}
+@media (min-width: 48em){
+     .card{
+	     max-width:33.28%;
+     }
+}
+@media (min-width: 84em){
+    .card{
+	    max-width:24.9%;
 	}
 }
+

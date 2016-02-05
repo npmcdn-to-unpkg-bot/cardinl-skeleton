@@ -1,25 +1,40 @@
-* + * {
 
-}
-.content{
-	padding: .2rem;
-}
 .list-item{
    max-width:99.9%;
 }
 .right{
 	float:right;
 }
-.menu-title{
+.title{
 	text-align:left;
 	display:inline;
+	float:left;
+	padding:0;
 }
-@media (min-width: 70em){
-	.menu-title{
+@media (min-width: 84em){
+	.title{
 	   text-align:center;
 	   display:block;
+	   float:none;
     }
 }
 .navigation{
-	
+
+}
+
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+a:hover   {
+	text-decoration: underline;
+    color: #F00;
+}
+a:active  {
+	text-decoration: none;
+    color: #F33;
 }

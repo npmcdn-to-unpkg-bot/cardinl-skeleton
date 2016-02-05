@@ -20,6 +20,9 @@ img{
 	max-width:100%;
 	height:auto;
 	width:auto\9;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
 }
 
 footer {
@@ -34,3 +37,4 @@ ul, li{
   list-style: none;
   padding:0;
 }
+

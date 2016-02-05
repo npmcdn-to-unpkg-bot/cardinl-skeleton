@@ -1,10 +1,12 @@
 {% embed 'partials/base.html.twig' %}
 	{% set collection = page.collection %}
 	{% block content %}
-			<div class="pure-u-1 pure-u-md-2-3 pure-u-xl-1-2 item">
+			<div class="pure-u-1 center">
 				{% for child in collection %}
+				 <div class="edge">
 				    <h2>{{child.header.title}}</h2>
 			        <div>{{child.content}}</div>
+			     </div>
 			    {% endfor %}
 			</div>
 	{% endblock %}

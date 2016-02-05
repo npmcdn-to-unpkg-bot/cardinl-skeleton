@@ -4,19 +4,14 @@
 	min-height: 6rem;
 	max-height:8rem;
     width:100%;
-    background-color: #CCC;
     ul li{
 		display:inline;
 		list-style:none;
 		text-align: center;
 	}
-	nav, header{
-		display: inline-block;
-		float: left;
-	}
 }
 
-@media (min-width: 70em){
+@media (min-width: 84em){
 	.menubar{
 	   height:100%;
 	   max-height:100%;
