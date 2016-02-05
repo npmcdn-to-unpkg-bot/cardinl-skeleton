@@ -1,12 +1,25 @@
 * + * {
-	margin-top: 1.5em;
+
 }
 .content{
-	padding: 9px;
+	padding: .2rem;
 }
 .list-item{
    max-width:99.9%;
 }
 .right{
 	float:right;
+}
+.menu-title{
+	text-align:left;
+	display:inline;
+}
+@media (min-width: 70em){
+	.menu-title{
+	   text-align:center;
+	   display:block;
+    }
+}
+.navigation{
+	
 }

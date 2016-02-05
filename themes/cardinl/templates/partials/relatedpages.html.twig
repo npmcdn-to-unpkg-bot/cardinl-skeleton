@@ -1,7 +1,7 @@
 {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-            <aside class="pure-u-1-1 pure-u-sm-1-3 pure-u-xl-1-6 content card item">
+            <aside class="pure-u-1 pure-u-sm-1-3 pure-u-xl-1-6 content card item">
                 <h2> Related Post:</h2>
                 <h3><a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a></h3>
                 {% set header_image_media = related.media.images|first %}

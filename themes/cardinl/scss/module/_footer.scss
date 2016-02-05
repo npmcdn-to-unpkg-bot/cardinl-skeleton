@@ -1,17 +1,14 @@
 .side-footer{
 	display:none;
-	z-index:0;
 }
 @media (min-width: 70em){
 	.side-footer{
 	     display:block;
-	     position: static;
-	     padding-bottom:2rem;
     }
 }
 .bottom-footer{
 
-	margin-top: 1rem;
+	margin-top: 6rem;
 }
 @media (min-width: 70em){
 	.bottom-footer{

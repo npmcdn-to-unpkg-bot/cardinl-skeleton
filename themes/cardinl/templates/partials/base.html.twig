@@ -28,25 +28,18 @@
 {% endblock head%}
 </head>
 <body class="pure-g">{% include 'partials/menu_bar.html.twig' %}
-        <div class="pure-u-1-1 pure-u-lg-21-24 body right">
+        <div class="pure-u-1 pure-u-lg-21-24 body">
             <div id="masonry" class="pure-g container">
-                {% if  (page.header.body_classes|contains('pure-u-1-1')) and (page.header.body_classes|contains('item')) %}
-                   <div class="{{ page.header.body_classes}}">
-                {% elseif page.header.body_classes|contains('pure-u-1-1')%}
-                   <div class="item {{ page.header.body_classes }}">
-                {% elseif page.header.body_classes|contains('item')%}
-                   <div class="pure-u-1-1 {{ page.header.body_classes }}">
-                {% else %}
-                   <div class="{{ page.header.body_classes }} item pure-u-1-1">
-                {% endif %}
+                   <div class="{{ page.header.body_classes }} item pure-u-1 content">
                         {% block content %}
                         {% endblock %}
                    </div>
                 {% block footer %}
-                <div class="bottom-footer pure-u-1-1 item">
+                <div class="bottom-footer">
                     {% include 'partials/footer.html.twig' %}
                 </div>
-                {% endblock %}</div>
+                {% endblock %}
+            </div>
         </div>
     {% block bottom %}
     <script>
