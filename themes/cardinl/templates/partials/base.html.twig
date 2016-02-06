@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
     {% block stylesheets %}
+        {% do assets.addCss('theme://css/animations.css',10 ) %}
         {% do assets.addCss('theme://css/normalize.css',10 ) %}
-        {% do assets.addCss('theme://css/grids-min.css', 105) %}
         {% do assets.addCss('theme://css/grids-custom-min.css', 104) %}
         {% do assets.addCss('theme://css-compiled/main.css',105) %}
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
@@ -21,47 +21,40 @@
     {{ assets.css() }}
     {% block javascripts %}
         {% do assets.addJs('jquery',102) %}
-        {% do assets.addJs('theme://js/isotope.pkgd.min.js',101) %}
-        {% do assets.addJs('theme://js/modernizr-custom.js',100) %}
+        {% do assets.addJs('theme://js/masonry.pkgd.min.js',100) %}
+        {% do assets.addJs('theme://js/modernizr-custom.js',101) %}
     {% endblock %}
     {{ assets.js()}}
 {% endblock head%}
 </head>
-<body class="pure-g">{% include 'partials/menu_bar.html.twig' %}
-        <div class="pure-u-1 pure-u-xl-5-6 body">
-            <div id="isotope" class="pure-g container">
-                   <div class="{{ page.header.body_classes }} item pure-u-1">
-                        {% block content %}
-                        {% endblock %}
-                   </div>
-                {% block footer %}
-                    {% include 'partials/footer.html.twig' %}
-                {% endblock %}
-            </div>
-        </div>
+<body  id="masonry" class="{{ page.header.body_classes }}">
+    {% include 'partials/menu_bar.html.twig' %}
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+      {% include 'partials/footer.html.twig' %}
+    {% endblock %}
     {% block bottom %}
     <script>
-    window.onload= function(){
-        if(Modernizr.csstransitions){
-            $('#isotope').isotope({
+   $(function(){
+     var $container = $('#masonry');
+      if(Modernizr.csstransitions){
+           $container.masonry({
             itemSelector: '.item',
-            masonry: {
-               columnWidth: 1
-             },
+            columnWidth: 1,
             percentPosition: true,
             transitionDuration: 0
             });
-        }else {
-            $('#isotope').isotope({
+        }
+        else {
+            $container.masonry({
             itemSelector: '.item',
-            masonry: {
-               columnWidth: 1
-             },
+            columnWidth: 1,
             percentPosition: true,
             transitionDuration: '.4s'
             });
         }
-    };
+    });
     </script>
     {% endblock %}
 </body>

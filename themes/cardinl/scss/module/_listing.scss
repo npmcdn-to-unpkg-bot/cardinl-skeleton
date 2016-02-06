@@ -1,3 +1,10 @@
-#listing .gutter{
+#listing .edge{
   margin-left: .3em;
+  padding-bottom: 6em;
+}
+
+@media (min-width: 84em){
+	#listing .edge{
+    margin-top: 8em;
+	}
 }
