@@ -1,21 +1,27 @@
 .menubar{
-	min-height: 8em;
-	max-height:8rem;
-    width:100%;
+    z-index:5;
     float:left;
     ul li{
 		display:inline;
 		list-style:none;
-		text-align: center;
+		padding-left:2rem;
+		font-size:2rem;
 	}
 }
-
+@media (min-width: 70em){
+	.menubar{
+	}
+}
 @media (min-width: 84em){
 	.menubar{
-	   min-height: 1480px;
+	   float:left;
 	   ul li{
+	   	  padding-bottom: 2rem;
 		  display:block;
+		  margin:2rem;
 	   }
 
 	}
 }
+
+

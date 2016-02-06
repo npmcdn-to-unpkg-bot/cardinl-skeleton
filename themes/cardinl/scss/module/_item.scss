@@ -1,7 +1,27 @@
 .item{
-    -webkit-transition: right .2s ease-in-out, top .2s ease-in-out;
+	float:left;
     -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
     -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
     -o-transition: right .2s ease-in-out, top .2s ease-in-out;
     transition: right .2s ease-in-out, top .2s ease-in-out;
 }
+
+
+@-moz-keyframes itemLoad { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes itemLoad { from { opacity:0; } to { opacity:1; } }
+@keyframes itemLoad { from { opacity:0; } to { opacity:1; } }
+.item-load{
+  opacity:0;
+  -moz-animation:itemLoad ease-in 1;
+  animation:itemLoad ease-in 1;
+
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -moz-animation-duration:.25s;
+  animation-duration:.25s;
+  -moz-animation-delay: .25s;
+  animation-delay: .25s;
+
+}
+

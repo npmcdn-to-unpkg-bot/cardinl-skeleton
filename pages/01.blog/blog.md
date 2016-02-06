@@ -12,12 +12,12 @@ content:
     order:
         by: date
         dir: desc
-    limit: 6
+    limit: 60
     pagination: true
 
 feed:
     description: blog at robmillerjones.com
-    limit: 5
+    limit: 60
 
 pagination: true
 ---

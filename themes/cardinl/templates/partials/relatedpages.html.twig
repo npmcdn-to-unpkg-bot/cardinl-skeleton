@@ -1,8 +1,8 @@
 {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-        <aside class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3 pure-u-xl-1-6 card item">
-            <div class="edge">
+        <aside class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 pure-u-xl-1-4 card item">
+            <div class="edge item-load">
                  <div>
                    <span>{{ page.date|date(config.system.pages.dateformat.short) }}</span>
                 </div>

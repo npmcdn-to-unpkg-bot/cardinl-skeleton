@@ -1,0 +1,70 @@
+.title{
+	text-align:left;
+	display:block;
+	padding: 0;
+	font-size: 2.25rem;
+
+}
+@media (min-width: 35.5em){
+	.title{
+    }
+}
+@media (min-width: 48em){
+	.title{
+
+    }
+}
+@media (min-width: 70em){
+	.title{
+		font-size: 2.75rem;
+    }
+}
+@media (min-width: 84em){
+	.title{
+		font-size: 3.25rem;
+    }
+}
+
+.subtitle{
+	text-align:left;
+	display:block;
+	font-size: 1rem;
+	line-height: 1.75rem;
+	padding: 0rem 0rem .75rem .5rem;
+}
+@media (min-width: 35.5em){
+	.subtitle{
+		font-size: 1rem;
+    }
+}
+@media (min-width: 48em){
+	.subtitle{
+     font-size: 1.25rem;
+     padding: 0rem 0rem 1.5rem .5rem;
+    }
+}
+@media (min-width: 70em){
+	.subtitle{
+		font-size: 1.5rem;
+		padding: 0rem 0rem 1.75rem .5rem;
+    }
+}
+@media (min-width: 84em){
+	.subtitle{
+		font-size: 1.75rem;
+		float:left;
+		padding: 0rem 0rem 2.75rem .5rem;
+    }
+}
+
+.banner{
+	padding: 0rem 0rem 0rem 2rem;
+	float:left;
+}
+
+@media (min-width: 84em){
+	.subtitle{
+		font-size: 1.75rem;
+		float:left;
+    }
+}
