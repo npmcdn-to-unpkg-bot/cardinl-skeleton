@@ -1,0 +1,19 @@
+// Base Sizes
+$base-font-size:				1rem !default;
+$base-line-height:				1.6 !default;
+$base-font-family:              sans-serif !default;
+$base-font-weight:              400 !default;
+
+// Headings
+$h1-font-size:					$base-font-size + 2.20 !default;
+$h2-font-size:					$base-font-size + 1.50 !default;
+$h3-font-size:					$base-font-size + 1.10 !default;
+$h4-font-size:					$base-font-size + 0.75 !default;
+$h5-font-size:					$base-font-size + 0.35 !default;
+$h6-font-size:					$base-font-size - 0.15 !default;
+
+// Spacing
+$leading-margin:				$base-line-height * 1rem !default;
+
+
+

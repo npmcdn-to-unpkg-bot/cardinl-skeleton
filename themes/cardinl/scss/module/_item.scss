@@ -1,9 +1,9 @@
 .item{
-	float:left;
-    -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
-    -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
-    -o-transition: right .2s ease-in-out, top .2s ease-in-out;
-    transition: right .2s ease-in-out, top .2s ease-in-out;
+	  float:left;
+    -moz-transition: right .4s ease-in-out, top .4s ease-in-out;
+    -ms-transition: right .4s ease-in-out, top .4s ease-in-out;
+    -o-transition: right .4s ease-in-out, top .4s ease-in-out;
+    transition: right .4s ease-in-out, top .4s ease-in-out;
 }
 
 
@@ -18,10 +18,10 @@
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
-  -moz-animation-duration:.25s;
-  animation-duration:.25s;
-  -moz-animation-delay: .25s;
-  animation-delay: .25s;
+  -moz-animation-duration:.2s;
+  animation-duration:.2s;
+  -moz-animation-delay: .2s;
+  animation-delay: .2s;
 
 }
 

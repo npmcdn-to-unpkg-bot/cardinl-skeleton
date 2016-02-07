@@ -21,7 +21,7 @@
         {% do assets.addJs('jquery',102) %}
         {% do assets.addJs('theme://js/imagesloaded.pkgd.min.js',100) %}
         {% do assets.addJs('theme://js/masonry.pkgd.min.js',100) %}
-        {% do assets.addJs('theme://js/modernizr-custom.js',101) %}
+        {% do assets.addJs('theme://js/modernizr-custom.js',105) %}
     {% endblock %}
     {{ assets.js()}}
 {% endblock head%}
@@ -38,31 +38,32 @@
     {% endblock %}
     {% block bottom %}
     <script>
- $(document).ready(function() {
+    $(window).load(function() {
+         var $container = $('#masonry');
+        $container.imagesLoaded( function() {
+              if(Modernizr.csstransitions){
+                $container.masonry( {
+                 itemSelector: '.item',
+                 columnWidth: 1,
+                 percentPosition: true,
+                 transitionDuration: 0
+               });
+             }
+             else {
+               $container.masonry({
+                 itemSelector: '.item',
+                 columnWidth: 1,
+                 percentPosition: true,
+                 transitionDuration: '.4s'
+               });
+             }
 
-    var container = document.querySelector('#masonry');
-    var msnry;
-    if(Modernizr.csstransitions){
-           msnry = new Masonry( container, {
-            itemSelector: '.item',
-            columnWidth: 1,
-            percentPosition: true,
-            transitionDuration: 0
-            });
-        }
-        else {
-            msnry = new Masonry( container, {
-            itemSelector: '.item',
-            columnWidth: 1,
-            percentPosition: true,
-            transitionDuration: '.4s'
-            });
-        }
-});
+
+        });
+
+    });
 
     </script>
     {% endblock %}
 </body>
 </html>
-
-

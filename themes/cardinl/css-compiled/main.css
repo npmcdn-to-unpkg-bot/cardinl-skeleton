@@ -429,24 +429,20 @@ th {
 .rrssb-buttons li a .rrssb-icon svg path {
   fill: #FFFFFF; }
 
+/*base adjustments to complement reset*/
 html {
   box-sizing: border-box;
-  position: relative;
-  font-size: 16px; }
+  position: relative; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
-h1 {
-  font-size: 3rem; }
-
-h2 {
-  font-size: 2rem; }
-
-p {
-  font-size: 1rem; }
-
 body {
+  color: #000;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   height: 100%;
   bottom: 0;
   margin: 0 0 10rem; }
@@ -483,23 +479,39 @@ a:active {
 .center {
   margin: auto;
   float: none;
-  display: block;
-  max-width: 1080px; }
+  display: block; }
 
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.hidden {
+  display: none; }
+
+/*container sizing for masonry*/
 .container {
   float: left; }
 
 @media (min-width: 84em) {
   .container {
     max-width: 87.4%; } }
+/*fix sizes for masonry*/
+@media (min-width: 35.5em) {
+  .card {
+    max-width: 49.9%; } }
+@media (min-width: 48em) {
+  .card {
+    max-width: 33.28%; } }
+@media (min-width: 84em) {
+  .card {
+    max-width: 24.9%; } }
 .pure-u-1 {
   width: 99.9%; }
 
-.right {
-  float: right; }
-
-.hidden {
-  display: none; }
+.js #masonry {
+  visibility: hidden; }
 
 .edge {
   margin: .5rem .5rem .5rem .5rem;
@@ -512,49 +524,35 @@ a:active {
   box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
   background: #FFF; }
 
-.title {
-  text-align: left;
-  display: block;
-  padding: 0;
-  font-size: 2.25rem; }
-
-@media (min-width: 70em) {
-  .title {
-    font-size: 2.75rem; } }
-@media (min-width: 84em) {
-  .title {
-    font-size: 3.25rem; } }
-.subtitle {
-  text-align: left;
-  display: block;
-  font-size: 1rem;
-  line-height: 1.75rem;
-  padding: 0rem 0rem .75rem .5rem; }
-
-@media (min-width: 35.5em) {
-  .subtitle {
-    font-size: 1rem; } }
-@media (min-width: 48em) {
-  .subtitle {
-    font-size: 1.25rem;
-    padding: 0rem 0rem 1.5rem .5rem; } }
-@media (min-width: 70em) {
-  .subtitle {
-    font-size: 1.5rem;
-    padding: 0rem 0rem 1.75rem .5rem; } }
-@media (min-width: 84em) {
-  .subtitle {
-    font-size: 1.75rem;
-    float: left;
-    padding: 0rem 0rem 2.75rem .5rem; } }
 .banner {
   padding: 0rem 0rem 0rem 2rem;
   float: left; }
 
+.title {
+  display: block;
+  padding: 0;
+  font-size: 2.1rem; }
+
+@media (min-width: 70em) {
+  .title {
+    font-size: 2.5rem; } }
+@media (min-width: 84em) {
+  .title {
+    font-size: 3.2rem; } }
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  padding: 0rem 0rem .75rem .5rem; }
+
+@media (min-width: 48em) {
+  .subtitle {
+    font-size: 1.25rem; } }
+@media (min-width: 70em) {
+  .subtitle {
+    font-size: 1.5rem; } }
 @media (min-width: 84em) {
   .subtitle {
-    font-size: 1.75rem;
-    float: left; } }
+    font-size: 1.75rem; } }
 .bottom-footer {
   margin-top: 6rem;
   text-align: right;
@@ -574,30 +572,19 @@ a:active {
     font-size: 2rem; }
 
 @media (min-width: 84em) {
-  .menubar {
-    float: left; }
-    .menubar ul li {
-      padding-bottom: 2rem;
-      display: block;
-      margin: 2rem; } }
+  .menubar ul li {
+    padding-bottom: 2rem;
+    display: block;
+    margin: 2rem; } }
 .card {
   margin-top: 1.5rem; }
 
-@media (min-width: 35.5em) {
-  .card {
-    max-width: 49.9%; } }
-@media (min-width: 48em) {
-  .card {
-    max-width: 33.28%; } }
-@media (min-width: 84em) {
-  .card {
-    max-width: 24.9%; } }
 .item {
   float: left;
-  -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
-  -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
-  -o-transition: right .2s ease-in-out, top .2s ease-in-out;
-  transition: right .2s ease-in-out, top .2s ease-in-out; }
+  -moz-transition: right .4s ease-in-out, top .4s ease-in-out;
+  -ms-transition: right .4s ease-in-out, top .4s ease-in-out;
+  -o-transition: right .4s ease-in-out, top .4s ease-in-out;
+  transition: right .4s ease-in-out, top .4s ease-in-out; }
 
 @-moz-keyframes itemLoad {
   from {
@@ -620,9 +607,9 @@ a:active {
   animation: itemLoad ease-in 1;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -moz-animation-duration: .25s;
-  animation-duration: .25s;
-  -moz-animation-delay: .25s;
-  animation-delay: .25s; }
+  -moz-animation-duration: .2s;
+  animation-duration: .2s;
+  -moz-animation-delay: .2s;
+  animation-delay: .2s; }
 
 /*# sourceMappingURL=main.css.map */

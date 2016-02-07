@@ -1,28 +1,23 @@
 
-
+/*base adjustments to complement reset*/
 html {
   box-sizing: border-box;
   position: relative;
-   font-size: 16px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-h1{
-  font-size: 3rem;
-}
-h2{
-  font-size: 2rem;
-}
-p{
-  font-size: 1rem;
-}
-body{
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
   height:100%;
   bottom:0;
   margin: 0 0 $footer-height;
 }
-
 img{
   max-width:100%;
   height:auto;
@@ -60,20 +55,46 @@ a:active  {
   margin:auto;
   float:none;
   display:block;
-  max-width: 1080px
 }
+.right{
+  float:right;
+}
+.left{
+  float: left;
+}
+ .hidden {
+  display:none;
+ }
 
+
+/*container sizing for masonry*/
 .container{
     float:left;
 
-
  }
+@media (min-width: 84em){
+   .container{
+      max-width: 87.4%;
+
+   }
+}
+
+/*fix sizes for masonry*/
+@media (min-width: 35.5em){
+     .card{
+       max-width:49.9%;
+     }
+}
+@media (min-width: 48em){
+     .card{
+       max-width:33.28%;
+     }
+}
 
 @media (min-width: 84em){
- .container{
-     max-width: 87.4%;
-
- }
+    .card{
+      max-width:24.9%;
+  }
 }
 
 
@@ -81,15 +102,4 @@ a:active  {
   width:99.9%;
 }
 
-.right{
-  float:right;
-}
-
-
-
-
-
- .hidden {
-  display:none;
- }
-
+.js #masonry {visibility:hidden;}
