@@ -506,7 +506,7 @@ a:active {
     max-width: 33.28%; } }
 @media (min-width: 84em) {
   .card {
-    max-width: 24.9%; } }
+    max-width: 20.8%; } }
 .pure-u-1 {
   width: 99.9%; }
 
@@ -581,10 +581,10 @@ a:active {
 
 .item {
   float: left;
-  -moz-transition: right .4s ease-in-out, top .4s ease-in-out;
-  -ms-transition: right .4s ease-in-out, top .4s ease-in-out;
-  -o-transition: right .4s ease-in-out, top .4s ease-in-out;
-  transition: right .4s ease-in-out, top .4s ease-in-out; }
+  -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
+  -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
+  -o-transition: right .2s ease-in-out, top .2s ease-in-out;
+  transition: right .2s ease-in-out, top .2s ease-in-out; }
 
 @-moz-keyframes itemLoad {
   from {

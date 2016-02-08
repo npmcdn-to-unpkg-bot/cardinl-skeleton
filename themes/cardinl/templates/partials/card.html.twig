@@ -1,40 +1,37 @@
+{% set thumbnail_image = page.header.thumbnail_image|defined(true) %}
+{% set thumbnail_image_width  = page.header.thumbnail_image_width|defined(280) %}
+{% set thumbnail_image_height = page.header.thumbnail_image_height|defined(134) %}
+{% set thumbnail_image_file = page.header.thumbnail_image_file %}
 
-
-    {% set header_image = page.header.header_image|defined(true) %}
-    {% set header_image_width  = page.header.header_image_width|defined(1200) %}
-    {% set header_image_height = page.header.header_image_height|defined(500) %}
-    {% set header_image_file = page.header.header_image_file %}
-
-    <div class="list-blog-header">
-        <span class="list-blog-date">
-            <em>{{ page.date|date("d M Y") }}</em>
-        </span>
-        {% if header_image %}
-            {% if header_image_file %}
-                {% set header_image_media = page.media.images[header_image_file] %}
-            {% else %}
-                {% set header_image_media = page.media.images|first %}
-            {% endif %}
-            {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
-        {% endif %}
-        {% if page.header.link %}
-            <h4>
-                <a href="{{ page.header.link }}">{{ page.title }}</a>
-            </h4>
+<div class="list-blog-header">
+    {% if page.header.link %}
+        <h4>
+            <a href="{{ page.header.link }}">{{ page.title }}</a>
+        </h4>
+    {% else %}
+        <h4>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </h4>
+    {% endif %}
+    {% if thumbnail_image %}
+        {% if thumbnail_image_file %}
+            {% set thumbnail_image_media = page.media.images[thumbnail_image_file] %}
         {% else %}
-            <h4>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-            </h4>
+            {% set thumbnail_image_media = page.media.images|first %}
         {% endif %}
-    </div>
+        {{ thumbnail_image_media.cropZoom(thumbnail_image_width, thumbnail_image_height).html }}
+    {% endif %}
+    <span class="list-blog-date">
+        <em>{{ page.date|date("d M Y") }}</em>
+    </span>
+</div>
 
-    <div class="list-blog-padding text">
+<div class="list-blog-padding text">
     {% if page.summary%}
          {{ page.summary }}
     {% else %}
             {{ page.content|truncate(300) }}
     {% endif %}
     <p><a href="{{ page.url }}">[click here to read more]</a></p>
-
-    </div>
+</div>
 

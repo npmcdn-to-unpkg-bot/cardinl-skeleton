@@ -3,6 +3,7 @@ title: Setting Up a Lorem Ipsum
 date: 01:00 1/17/2016
 slug: setting-up-a-lorem-ipsum
 menu: Setting Up Lorem Ipsum
+thumbnail_image_file: moss-thumb.jpg
 summary:
   enabled: true
 taxonomy:

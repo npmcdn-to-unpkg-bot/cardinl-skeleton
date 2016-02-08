@@ -1,0 +1,26 @@
+<script>
+(function () {
+    "use strict";
+  $(window).load(function () {
+        var grid = document.querySelector('#masonry');
+        var msnry;
+        imagesLoaded(grid, function () {
+            if (Modernizr.csstransitions) {
+                msnry = new Masonry(grid, {
+                    itemSelector: '.item',
+                    columnWidth: 1,
+                    percentPosition: true,
+                    transitionDuration: 0
+                });
+            } else {
+                msnry = new Masonry(grid, {
+                    itemSelector: '.item',
+                    columnWidth: 1,
+                    percentPosition: true,
+                    transitionDuration: '.2s'
+                });
+            }
+        });
+    });
+}());
+</script>
