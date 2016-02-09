@@ -1,3 +1,8 @@
+.scroll-stick{
+    position:fixed;
+    top:0;
+    left:0;
+}
 .menubar{
     z-index:5;
     float:left;
@@ -5,7 +10,6 @@
     top:176;
     background-color:#FFF;
     min-height: $menu-height;
-
     li{
 		display:inline;
 		list-style:none;
@@ -29,17 +33,31 @@
 	}
 }
 
-
-#place-holder{
-
-}
 @media (min-width: 84em){
 	#place-holder{
        display:none;
     }
 }
-.scroll-stick{
-    position:fixed;
-    top:0;
-    left:0;
+
+@-moz-keyframes menuLoad { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes menuLoad { from { opacity:0; } to { opacity:1; } }
+@keyframes menuLoad { from { opacity:0; } to { opacity:1; } }
+.menu-load{
+  opacity:0;
+  -webkit-animation:menuLoad linear 1;
+  -moz-animation:menuLoad linear 1;
+  animation:menuLoad linear 1;
+
+-webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+-webkit-animation-duration:.3s;
+  -moz-animation-duration:.3s;
+  animation-duration:.3s;
+
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  animation-delay: .3s;
+
 }

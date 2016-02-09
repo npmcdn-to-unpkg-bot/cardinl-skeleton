@@ -476,11 +476,6 @@ a:active {
   text-decoration: none;
   color: #000; }
 
-.center {
-  margin: auto;
-  float: none;
-  display: block; }
-
 .right {
   float: right; }
 
@@ -488,14 +483,13 @@ a:active {
   float: left; }
 
 .hidden {
+  visibility: hidden; }
+
+.remove {
   display: none; }
 
 .show {
   display: block; }
-
-/*container sizing for masonry*/
-.container {
-  float: right; }
 
 /*fix sizes for masonry*/
 @media (min-width: 35.5em) {
@@ -523,6 +517,40 @@ a:active {
   -moz-box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
   background: #FFF; }
+
+/*container layout for masonry*/
+.container {
+  float: right; }
+
+@-moz-keyframes containerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes containerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes containerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.container-load {
+  opacity: 0;
+  -webkit-animation: containerLoad linear 1;
+  -moz-animation: containerLoad linear 1;
+  animation: containerLoad linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .4s;
+  -moz-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  animation-delay: .4s; }
 
 #header {
   padding: 0rem 0rem 0rem 1rem;
@@ -560,6 +588,36 @@ a:active {
   .subtitle {
     font-size: 1.75rem;
     display: block; } }
+@-moz-keyframes headerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes headerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes headerLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.header-load {
+  opacity: 0;
+  -webkit-animation: headerLoad linear 1;
+  -moz-animation: headerLoad linear 1;
+  animation: headerLoad linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .15s;
+  -moz-animation-duration: .15s;
+  animation-duration: .15s;
+  -webkit-animation-delay: .15s;
+  -moz-animation-delay: .15s;
+  animation-delay: .15s; }
+
 .bottom-footer {
   margin-top: 6rem;
   text-align: right;
@@ -573,6 +631,11 @@ a:active {
 @media (min-width: 84em) {
   .bottom-footer {
     padding-right: 7rem; } }
+.scroll-stick {
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 .menubar {
   z-index: 5;
   float: left;
@@ -596,10 +659,35 @@ a:active {
 @media (min-width: 84em) {
   #place-holder {
     display: none; } }
-.scroll-stick {
-  position: fixed;
-  top: 0;
-  left: 0; }
+@-moz-keyframes menuLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes menuLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes menuLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.menu-load {
+  opacity: 0;
+  -webkit-animation: menuLoad linear 1;
+  -moz-animation: menuLoad linear 1;
+  animation: menuLoad linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .3s;
+  -moz-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  animation-delay: .3s; }
 
 .card {
   margin-top: 1.5rem; }
@@ -610,31 +698,5 @@ a:active {
   -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
   -o-transition: right .2s ease-in-out, top .2s ease-in-out;
   transition: right .2s ease-in-out, top .2s ease-in-out; }
-
-@-moz-keyframes itemLoad {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-webkit-keyframes itemLoad {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes itemLoad {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-.item-load {
-  opacity: 0;
-  -moz-animation: itemLoad ease-in 1;
-  animation: itemLoad ease-in 1;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -moz-animation-duration: .2s;
-  animation-duration: .2s;
-  -moz-animation-delay: .2s;
-  animation-delay: .2s; }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@
 	{% set collection = page.collection %}
 	{% block content %}
 			<article id="listing" class="pure-u-1 pure-u-md-2-3 pure-u-xl-1-2 item blog">
-				<div class="edge item-load">
+				<div class="edge">
 				{% for child in collection %}
 				 {% if child.isFirst %}
 			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}

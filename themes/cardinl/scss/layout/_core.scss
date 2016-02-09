@@ -49,13 +49,6 @@ a:active  {
   text-decoration: none;
     color: #000;
 }
-
-
-.center{
-  margin:auto;
-  float:none;
-  display:block;
-}
 .right{
   float:right;
 }
@@ -63,25 +56,16 @@ a:active  {
   float: left;
 }
  .hidden {
-  display:none;
+     visibility:hidden;
+ }
+ .remove{
+     display:none;
  }
  .show {
   display:block;
  }
 
 
-/*container sizing for masonry*/
-.container{
-    float:right;
-
-
- }
-@media (min-width: 84em){
-   .container{
-   
-
-   }
-}
 
 /*fix sizes for masonry*/
 @media (min-width: 35.5em){
@@ -100,10 +84,11 @@ a:active  {
       max-width:20.8%;
   }
 }
-
-
 .pure-u-1{
   width:99.9%;
 }
 
 .js #masonry {visibility:hidden;}
+
+
+

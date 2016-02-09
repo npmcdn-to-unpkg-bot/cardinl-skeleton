@@ -1,0 +1,26 @@
+/*container layout for masonry*/
+.container{
+    float:right;
+ }
+@-moz-keyframes containerLoad { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes containerLoad { from { opacity:0; } to { opacity:1; } }
+@keyframes containerLoad { from { opacity:0; } to { opacity:1; } }
+.container-load{
+  opacity:0;
+  -webkit-animation:containerLoad linear 1;
+  -moz-animation:containerLoad linear 1;
+  animation:containerLoad linear 1;
+
+-webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+-webkit-animation-duration:.4s;
+  -moz-animation-duration:.4s;
+  animation-duration:.4s;
+
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  animation-delay: .4s;
+
+}

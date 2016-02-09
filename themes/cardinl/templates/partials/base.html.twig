@@ -30,7 +30,7 @@
 <body>
     {% include 'partials/header.html.twig' %}
     {% include 'partials/menu_bar.html.twig' %}
-    <div id="masonry" class="{{ page.header.body_classes }} container pure-u-1 pure-u-xl-7-8">
+    <div id="masonry" class="{{ page.header.body_classes }} container pure-u-1 pure-u-xl-7-8 container-load">
         {% block content %}
         {% endblock %}
     </div>
@@ -41,23 +41,21 @@
         {% include 'partials/js.html.twig' %}
     {% endblock %}
     <script>
-    var window_top = $(window);
-    function navbar_stick() {
-          if (window_top.scrollTop() >  176) {
-            $('#navbar').addClass('scroll-stick');
-            $('#place-holder').removeClass('hidden');
-          } else {
-            $('#navbar').removeClass('scroll-stick');
-             $('#place-holder').addClass('hidden');
-          }
-
-}
- $(window).load(function () {
-  $(window).scroll(navbar_stick);
-   console.log(window_top.scrollTop());
-  navbar_stick();
-});
-
+        var window_top = $(window);
+        function navbar_stick() {
+            if (window_top.scrollTop() >  176) {
+                $('#navbar').addClass('scroll-stick');
+                $('#place-holder').removeClass('remove');
+            } else {
+                $('#navbar').removeClass('scroll-stick');
+                $('#place-holder').addClass('remove');
+            }
+        }
+        $(window).load(function () {
+           $(window).scroll(navbar_stick);
+           navbar_stick();
+           $('.item').addClass('container-load');
+        });
     </script>
 </body>
 </html>
