@@ -13,15 +13,16 @@
         {% do assets.addCss('theme://css/grids-custom-min.css', 104) %}
         {% do assets.addCss('theme://css-compiled/main.css',105) %}
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
-            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+            {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js') %}
         {% endif %}
     {% endblock %}
     {{ assets.css() }}
     {% block javascripts %}
-    {% do assets.addJs('jquery',117) %}
-    {% do assets.addJs('theme://js/imagesloaded.pkgd.min.js',108) %}
-    {% do assets.addJs('theme://js/masonry.pkgd.min.js',109) %}
+    {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js',117) %}
+    {% do assets.addJs('https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js',108) %}
+    {% do assets.addJs('https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js',108) %}
     {% do assets.addJs('theme://js/modernizr-custom.js',110) %}
+    {% do assets.addJs('theme://js/card.js',99) %}
     {% endblock %}
     {{ assets.js()}}
 {% endblock head%}
@@ -30,14 +31,33 @@
     {% include 'partials/header.html.twig' %}
     {% include 'partials/menu_bar.html.twig' %}
     <div id="masonry" class="{{ page.header.body_classes }} container pure-u-1 pure-u-xl-7-8">
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
     {% block footer %}
-      {% include 'partials/footer.html.twig' %}
+        {% include 'partials/footer.html.twig' %}
     {% endblock %}
     {% block bottom %}
-   {% include 'partials/js.html.twig' %}
+        {% include 'partials/js.html.twig' %}
     {% endblock %}
+    <script>
+    var window_top = $(window);
+    function navbar_stick() {
+          if (window_top.scrollTop() >  176) {
+            $('#navbar').addClass('scroll-stick');
+            $('#place-holder').removeClass('hidden');
+          } else {
+            $('#navbar').removeClass('scroll-stick');
+             $('#place-holder').addClass('hidden');
+          }
+
+}
+ $(window).load(function () {
+  $(window).scroll(navbar_stick);
+   console.log(window_top.scrollTop());
+  navbar_stick();
+});
+
+    </script>
 </body>
 </html>

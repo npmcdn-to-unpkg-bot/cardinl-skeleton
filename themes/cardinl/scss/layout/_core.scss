@@ -65,16 +65,20 @@ a:active  {
  .hidden {
   display:none;
  }
+ .show {
+  display:block;
+ }
 
 
 /*container sizing for masonry*/
 .container{
-    float:left;
+    float:right;
+
 
  }
 @media (min-width: 84em){
    .container{
-      max-width: 87.4%;
+   
 
    }
 }

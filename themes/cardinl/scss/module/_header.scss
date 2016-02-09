@@ -1,7 +1,12 @@
-.banner{
-	padding: 0rem 0rem 0rem 2rem;
+#header{
+	padding: 0rem 0rem 0rem 1rem;
 	float:left;
+	height:$header-height;
 }
+
+
+
+
 
 .title{
 	display:block;
@@ -20,7 +25,7 @@
 }
 @media (min-width: 70em){
 	.title{
-		font-size: $h2-font-size;
+		font-size: $h2-font-size +.25;
     }
 }
 @media (min-width: 84em){
@@ -30,28 +35,31 @@
 }
 
 .subtitle{
-	display:block;
+	display:none;
 	font-size: $base-font-size;
 	padding: 0rem 0rem .75rem .5rem;
 }
-@media (min-width: 35.5em){
+@media (min-width: 25em){
 	.subtitle{
-
+      display:block;
     }
 }
 @media (min-width: 48em){
 	.subtitle{
      font-size: $base-font-size + .25;
+     display:block;
     }
 }
 @media (min-width: 70em){
 	.subtitle{
 		font-size: $base-font-size + .5;
+		display:block;
     }
 }
 @media (min-width: 84em){
 	.subtitle{
 		font-size: $base-font-size + .75rem;
+		display:block;
     }
 }
 

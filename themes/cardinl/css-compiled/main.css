@@ -490,13 +490,13 @@ a:active {
 .hidden {
   display: none; }
 
+.show {
+  display: block; }
+
 /*container sizing for masonry*/
 .container {
-  float: left; }
+  float: right; }
 
-@media (min-width: 84em) {
-  .container {
-    max-width: 87.4%; } }
 /*fix sizes for masonry*/
 @media (min-width: 35.5em) {
   .card {
@@ -514,8 +514,8 @@ a:active {
   visibility: hidden; }
 
 .edge {
-  margin: .5rem .5rem .5rem .5rem;
-  padding: 1rem;
+  margin: .8rem;
+  padding: .9rem;
   border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
@@ -524,9 +524,10 @@ a:active {
   box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
   background: #FFF; }
 
-.banner {
-  padding: 0rem 0rem 0rem 2rem;
-  float: left; }
+#header {
+  padding: 0rem 0rem 0rem 1rem;
+  float: left;
+  height: 11rem; }
 
 .title {
   display: block;
@@ -535,47 +536,71 @@ a:active {
 
 @media (min-width: 70em) {
   .title {
-    font-size: 2.5rem; } }
+    font-size: 2.75rem; } }
 @media (min-width: 84em) {
   .title {
     font-size: 3.2rem; } }
 .subtitle {
-  display: block;
+  display: none;
   font-size: 1rem;
   padding: 0rem 0rem .75rem .5rem; }
 
+@media (min-width: 25em) {
+  .subtitle {
+    display: block; } }
 @media (min-width: 48em) {
   .subtitle {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem;
+    display: block; } }
 @media (min-width: 70em) {
   .subtitle {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem;
+    display: block; } }
 @media (min-width: 84em) {
   .subtitle {
-    font-size: 1.75rem; } }
+    font-size: 1.75rem;
+    display: block; } }
 .bottom-footer {
   margin-top: 6rem;
   text-align: right;
-  padding-right: 5rem; }
+  padding-right: .5rem; }
   .bottom-footer ul li {
     display: inline;
     list-style: none;
-    text-align: center; }
-
-.menubar {
-  z-index: 5;
-  float: left; }
-  .menubar ul li {
-    display: inline;
-    list-style: none;
-    padding-left: 2rem;
-    font-size: 2rem; }
+    text-align: center;
+    padding-left: 1rem; }
 
 @media (min-width: 84em) {
-  .menubar ul li {
-    padding-bottom: 2rem;
-    display: block;
-    margin: 2rem; } }
+  .bottom-footer {
+    padding-right: 7rem; } }
+.menubar {
+  z-index: 5;
+  float: left;
+  left: 0;
+  top: 176;
+  background-color: #FFF;
+  min-height: 5rem; }
+  .menubar li {
+    display: inline;
+    list-style: none;
+    padding-left: 1.3rem;
+    font-size: 1.35rem; }
+
+@media (min-width: 84em) {
+  .menubar {
+    left: 0; }
+    .menubar ul li {
+      padding-top: .3rem;
+      display: block;
+      margin: 2rem; } }
+@media (min-width: 84em) {
+  #place-holder {
+    display: none; } }
+.scroll-stick {
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 .card {
   margin-top: 1.5rem; }
 

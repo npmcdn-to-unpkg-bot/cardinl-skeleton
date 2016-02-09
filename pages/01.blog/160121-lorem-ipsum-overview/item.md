@@ -7,7 +7,7 @@ thumbnail_image_file: crows-thumb.jpg
 taxonomy:
     category: blog
     tag: [lorem, ipsum, cursus, porta]
-header_image_file: 'crows.JPG'
+header_image_file: 'crows.jpg'
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies tristique nulla et mattis. Phasellus id massa eget nisl congue blandit sit amet id ligula. Praesent et nulla eu augue tempus sagittis. Mauris faucibus nibh et nibh cursus in vestibulum sapien egestas. Curabitur ut lectus tortor. 
 
