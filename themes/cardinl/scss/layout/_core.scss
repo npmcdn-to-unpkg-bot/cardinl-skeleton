@@ -3,11 +3,14 @@
 html {
   box-sizing: border-box;
   position: relative;
+  background-color: #CCC;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+h2{
+  font-size: $h3-font-size;
+}
 body {
   color: $text-color;
   font-size: $base-font-size;

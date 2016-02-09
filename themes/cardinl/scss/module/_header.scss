@@ -6,24 +6,25 @@
 .title{
 	display:block;
 	padding: 0;
-	font-size: $h3-font-size;
+	font-size: $h4-font-size;
 
 }
 @media (min-width: 35.5em){
 	.title{
+		font-size: $h3-font-size;
     }
 }
-@media (min-width: 48em){
+@media (min-width: 42em){
 	.title{
-
+        font-size: $h3-font-size +.1;
     }
 }
-@media (min-width: 70em){
+@media (min-width: 72em){
 	.title{
-		font-size: $h2-font-size +.25;
+		font-size: $h2-font-size;
     }
 }
-@media (min-width: 84em){
+@media (min-width: 85em){
 	.title{
 		font-size: $h1-font-size;
     }
@@ -38,15 +39,15 @@
       display:block;
     }
 }
-@media (min-width: 48em){
+@media (min-width: 52em){
 	.subtitle{
-     font-size: $base-font-size + .25;
+     font-size: $base-font-size + .15;
      display:block;
     }
 }
 @media (min-width: 70em){
 	.subtitle{
-		font-size: $base-font-size + .5;
+		font-size: $base-font-size + .35;
 		display:block;
     }
 }

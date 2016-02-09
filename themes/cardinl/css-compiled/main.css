@@ -432,13 +432,17 @@ th {
 /*base adjustments to complement reset*/
 html {
   box-sizing: border-box;
-  position: relative; }
+  position: relative;
+  background-color: #CCC; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
+h2 {
+  font-size: 2.488rem; }
+
 body {
-  color: #000;
+  color: #111;
   font-size: 1rem;
   font-family: sans-serif;
   font-weight: 400;
@@ -541,15 +545,23 @@ a:active {
   opacity: 0;
   -webkit-animation: containerLoad linear 1;
   -moz-animation: containerLoad linear 1;
+  -ms-animation: containerLoad linear 1;
+  -o-animation: containerLoad linear 1;
   animation: containerLoad linear 1;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: .4s;
   -moz-animation-duration: .4s;
+  -ms-animation-duration: .4s;
+  -o-animation-duration: .4s;
   animation-duration: .4s;
   -webkit-animation-delay: .4s;
   -moz-animation-delay: .4s;
+  -ms-animation-delay: .4s;
+  -o-animation-delay: .4s;
   animation-delay: .4s; }
 
 #header {
@@ -560,14 +572,20 @@ a:active {
 .title {
   display: block;
   padding: 0;
-  font-size: 2.1rem; }
+  font-size: 1.728rem; }
 
-@media (min-width: 70em) {
+@media (min-width: 35.5em) {
   .title {
-    font-size: 2.75rem; } }
-@media (min-width: 84em) {
+    font-size: 2.488rem; } }
+@media (min-width: 42em) {
   .title {
-    font-size: 3.2rem; } }
+    font-size: 2.588rem; } }
+@media (min-width: 72em) {
+  .title {
+    font-size: 3.583rem; } }
+@media (min-width: 85em) {
+  .title {
+    font-size: 4.3rem; } }
 .subtitle {
   display: none;
   font-size: 1rem;
@@ -576,13 +594,13 @@ a:active {
 @media (min-width: 25em) {
   .subtitle {
     display: block; } }
-@media (min-width: 48em) {
+@media (min-width: 52em) {
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     display: block; } }
 @media (min-width: 70em) {
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     display: block; } }
 @media (min-width: 84em) {
   .subtitle {
@@ -621,16 +639,16 @@ a:active {
 .bottom-footer {
   margin-top: 6rem;
   text-align: right;
-  padding-right: .5rem; }
+  padding-right: .75rem; }
   .bottom-footer ul li {
     display: inline;
     list-style: none;
     text-align: center;
-    padding-left: 1rem; }
+    padding-left: 1.5rem; }
 
 @media (min-width: 84em) {
   .bottom-footer {
-    padding-right: 7rem; } }
+    padding-right: 1rem; } }
 .scroll-stick {
   position: fixed;
   top: 0;
@@ -641,13 +659,13 @@ a:active {
   float: left;
   left: 0;
   top: 176;
-  background-color: #FFF;
+  background-color: #CCC;
   min-height: 5rem; }
   .menubar li {
     display: inline;
     list-style: none;
     padding-left: 1.3rem;
-    font-size: 1.35rem; }
+    font-size: 1.44rem; }
 
 @media (min-width: 84em) {
   .menubar {
@@ -698,5 +716,8 @@ a:active {
   -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
   -o-transition: right .2s ease-in-out, top .2s ease-in-out;
   transition: right .2s ease-in-out, top .2s ease-in-out; }
+
+.list-item p {
+  padding: 1rem; }
 
 /*# sourceMappingURL=main.css.map */
