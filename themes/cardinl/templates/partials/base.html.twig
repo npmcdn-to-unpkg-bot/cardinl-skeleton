@@ -10,7 +10,8 @@
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/grids-custom-min.css', 104) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Lora:700,400italic', 104) %}
+         {% do assets.addCss('theme://css/grids-custom-min.css', 104) %}
         {% do assets.addCss('theme://css-compiled/main.css',105) %}
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
             {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js') %}

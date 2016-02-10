@@ -6,7 +6,7 @@
 .title{
 	display:block;
 	padding: 0;
-	font-size: $h4-font-size;
+	font-size: $h4-font-size + .3;
 
 }
 @media (min-width: 35.5em){
@@ -19,12 +19,17 @@
         font-size: $h3-font-size +.1;
     }
 }
+@media (min-width: 62em){
+	.title{
+        font-size: $h3-font-size +.3;
+    }
+}
 @media (min-width: 72em){
 	.title{
 		font-size: $h2-font-size;
     }
 }
-@media (min-width: 85em){
+@media (min-width: 86em){
 	.title{
 		font-size: $h1-font-size;
     }
@@ -32,6 +37,8 @@
 .subtitle{
 	display:none;
 	font-size: $base-font-size;
+	font-style: italic;
+	font-weight: 400;
 	padding: 0rem 0rem .75rem .5rem;
 }
 @media (min-width: 25em){
