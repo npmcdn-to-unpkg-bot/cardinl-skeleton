@@ -2,6 +2,8 @@
 .container{
     float:right;
  }
+
+ /*page-loading animation, gives masonry time to adjust */
 @-moz-keyframes containerLoad { from { opacity:0; } to { opacity:1; } }
 @-webkit-keyframes containerLoad { from { opacity:0; } to { opacity:1; } }
 @keyframes containerLoad { from { opacity:0; } to { opacity:1; } }

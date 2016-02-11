@@ -24,10 +24,11 @@ $(window).load(function () {
     });
 }());
 </script>
- <script>
+<script>
         var window_top = $(window);
+        var nav_top = $('#navbar').offset().top;
         function navbar_stick() {
-            if (window_top.scrollTop() >  176) {
+            if (window_top.scrollTop() >= nav_top) {
                 $('#navbar').addClass('scroll-stick');
                 $('#place-holder').removeClass('remove');
             } else {

@@ -1,41 +1,52 @@
 
-/*base adjustments to complement reset*/
+/*-----------------------------------------------------------------------------
+base styles and adjustments
+-----------------------------------------------------------------------------*/
+
+/*size fix so masonry fills columns appropriately and tiles don't 'stick'.
+This resolves an apparent conflict between this combined implementation of
+Masonry.js and Puregrids. Other elements that are both sized by Puregrids
+and arranged by Masonry are similarly reduced in width by a fraction of
+a percent*/
+.pure-u-1{
+  width:99.9%;
+}
+
+/*base adjustments*/
 html {
   box-sizing: border-box;
   position: relative;
-  height:100%;
+  height:100%;  /*enables full-length vertical sidebar*/
   min-height:100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 body {
   color: $core-text-color;
   line-height: $base-line-height;
   background-color: $core-background;
-  height:100% !important;
+  height:100%;
   bottom:0;
-  margin: 0 0 $footer-height;
+  margin: 0 0 $footer-height; /*sticky footer styling*/
 }
-h1 {
-    font-family:$heading-font-stack;
+footer {
+    height: $footer-height;
+    width: 100%;
+    p {
+      padding-bottom:2rem;
+    }
 }
 img{
   max-width:100%;
   height:auto;
-  width:auto\9;
+  width:auto\9; /*responsive image on resize hack*/
 }
-
-footer {
-    height: $footer-height;
-    width: 100%;
-}
-
 ul, li{
   list-style: none;
   padding:0;
 }
+
 a:link {
     text-decoration: none;
     color: #000;
@@ -53,46 +64,24 @@ a:active  {
     color: #000;
 }
 
+/*wrapper classes*/
 .right{
-  float:right;
+      float:right;
 }
 .left{
-  float: left;
+      float: left;
 }
- .hidden {
-     visibility:hidden;
- }
- .remove{
-     display:none;
- }
- .show {
-  display:block;
- }
-
-
-
-/*fix sizes for masonry*/
-@media (min-width: 35.5em){
-     .card{
-       max-width:49.9%;
-     }
+.hidden {
+      visibility:hidden;
 }
-@media (min-width: 48em){
-     .card{
-       max-width:33.28%;
-     }
+.remove{
+      display:none;
+}
+.show {
+      display:block;
 }
 
-@media (min-width: 84em){
-    .card{
-      max-width:20.8%;
-  }
-}
-.pure-u-1{
-  width:99.9%;
-}
 
-.js #masonry {visibility:hidden;}
 
 
 

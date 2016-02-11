@@ -353,6 +353,8 @@ td,
 th {
   padding: 0; }
 
+/**/
+/**/
 .rrssb-text {
   visibility: hidden; }
 
@@ -429,11 +431,23 @@ th {
 .rrssb-buttons li a .rrssb-icon svg path {
   fill: #FFFFFF; }
 
-/*base adjustments to complement reset*/
+/*-----------------------------------------------------------------------------
+base styles and adjustments
+-----------------------------------------------------------------------------*/
+/*size fix so masonry fills columns appropriately and tiles don't 'stick'.
+This resolves an apparent conflict between this combined implementation of
+Masonry.js and Puregrids. Other elements that are both sized by Puregrids
+and arranged by Masonry are similarly reduced in width by a fraction of
+a percent*/
+.pure-u-1 {
+  width: 99.9%; }
+
+/*base adjustments*/
 html {
   box-sizing: border-box;
   position: relative;
   height: 100%;
+  /*enables full-length vertical sidebar*/
   min-height: 100%; }
 
 *, *:before, *:after {
@@ -443,21 +457,22 @@ body {
   color: #050A0C;
   line-height: 1.6;
   background-color: #FFFEFF;
-  height: 100% !important;
+  height: 100%;
   bottom: 0;
-  margin: 0 0 10rem; }
+  margin: 0 0 14rem;
+  /*sticky footer styling*/ }
 
-h1 {
-  font-family: "Lora", "Trebuchet", "Trebuchet MS"; }
+footer {
+  height: 14rem;
+  width: 100%; }
+  footer p {
+    padding-bottom: 2rem; }
 
 img {
   max-width: 100%;
   height: auto;
-  width: auto\9; }
-
-footer {
-  height: 10rem;
-  width: 100%; }
+  width: auto\9;
+  /*responsive image on resize hack*/ }
 
 ul, li {
   list-style: none;
@@ -479,6 +494,7 @@ a:active {
   text-decoration: none;
   color: #000; }
 
+/*wrapper classes*/
 .right {
   float: right; }
 
@@ -494,22 +510,9 @@ a:active {
 .show {
   display: block; }
 
-/*fix sizes for masonry*/
-@media (min-width: 35.5em) {
-  .card {
-    max-width: 49.9%; } }
-@media (min-width: 48em) {
-  .card {
-    max-width: 33.28%; } }
-@media (min-width: 84em) {
-  .card {
-    max-width: 20.8%; } }
-.pure-u-1 {
-  width: 99.9%; }
-
-.js #masonry {
-  visibility: hidden; }
-
+/*edge style for masonry cards - wrapper div that allows
+adjusting padding, border, and margin of tiles without
+having to adjust column or card sizing*/
 .edge {
   margin: .8rem;
   padding: .9rem;
@@ -525,6 +528,7 @@ a:active {
 .container {
   float: right; }
 
+/*page-loading animation, gives masonry time to adjust */
 @-moz-keyframes containerLoad {
   from {
     opacity: 0; }
@@ -563,16 +567,17 @@ a:active {
   -o-animation-delay: .4s;
   animation-delay: .4s; }
 
-#header {
-  padding: 0rem 0rem 0rem 1rem;
-  float: left;
-  height: 11rem; }
-
+/*-----------------------------------------------------------------------------
+header styles
+-----------------------------------------------------------------------------*/
+/*header first line*/
 .title {
   display: block;
   padding: 0;
-  font-size: 2.028rem; }
+  font-size: 2.028rem;
+  font-family: "Lora", "Trebuchet", "Trebuchet MS"; }
 
+/*content-based breakpoints for responsive title text*/
 @media (min-width: 35.5em) {
   .title {
     font-size: 2.488rem; } }
@@ -588,28 +593,27 @@ a:active {
 @media (min-width: 86em) {
   .title {
     font-size: 4.3rem; } }
+/*header second line*/
 .subtitle {
-  display: none;
+  display: block;
   font-size: 1rem;
-  font-style: italic;
   font-weight: 400;
   padding: 0rem 0rem .75rem .5rem; }
 
+/*content-based breakpoints for responsive sub-title text*/
 @media (min-width: 25em) {
   .subtitle {
-    display: block; } }
+    font-size: 1.09rem; } }
 @media (min-width: 52em) {
   .subtitle {
-    font-size: 1.15rem;
-    display: block; } }
+    font-size: 1.15rem; } }
 @media (min-width: 70em) {
   .subtitle {
-    font-size: 1.35rem;
-    display: block; } }
+    font-size: 1.35rem; } }
 @media (min-width: 84em) {
   .subtitle {
-    font-size: 1.75rem;
-    display: block; } }
+    font-size: 1.75rem; } }
+/*fast fade-in-first animation for top line of header text*/
 @-moz-keyframes headerLoad {
   from {
     opacity: 0; }
@@ -640,8 +644,25 @@ a:active {
   -moz-animation-delay: .15s;
   animation-delay: .15s; }
 
+/*content-based breakpoints for responsive header height*/
+#header {
+  padding: 0rem 0rem 0rem 1rem;
+  float: left;
+  height: 6.9rem; }
+
+@media (min-width: 72em) {
+  #header {
+    height: 7.5rem; } }
+@media (min-width: 84em) {
+  #header {
+    height: 11rem; } }
+/*conserve screen space for mobile sizes*/
+#topline {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .bottom-footer {
-  margin-top: 6rem;
+  margin-top: 3rem;
   text-align: right;
   padding-right: .75rem; }
   .bottom-footer ul li {
@@ -653,36 +674,43 @@ a:active {
 @media (min-width: 84em) {
   .bottom-footer {
     padding-right: 1rem; } }
+/*-----------------------------------------------------------------------------
+navigation bar styles
+-----------------------------------------------------------------------------*/
+/*placeholder to prevent 'jump' when switching menu to fixed position */
+@media (min-width: 84em) {
+  #place-holder {
+    display: none; } }
+/*vertical-to-horizontal navigation-menu styles*/
+.menubar {
+  z-index: 5;
+  float: left;
+  background-color: inherit; }
+  .menubar li {
+    display: inline;
+    list-style: none;
+    padding-left: 1.3rem;
+    font-family: "Lora", "Trebuchet", "Trebuchet MS";
+    font-size: 1.2rem; }
+  .menubar ul {
+    margin: 0; }
+
+/*vertical dispay for large screen sizes*/
+@media (min-width: 84em) {
+  .menubar {
+    height: inherit; }
+    .menubar li {
+      padding-top: 1rem;
+      display: block;
+      margin: 2rem;
+      font-size: 1.728rem; } }
+/*stick-on-scroll for navigation menu*/
 .scroll-stick {
   position: fixed;
   top: 0;
   left: 0; }
 
-.menubar {
-  z-index: 5;
-  float: left;
-  left: 0;
-  top: 176;
-  background-color: red;
-  min-height: 5rem; }
-  .menubar li {
-    display: inline;
-    list-style: none;
-    padding-left: 1.3rem;
-    font-size: 1.44rem; }
-
-@media (min-width: 84em) {
-  .menubar {
-    background-color: red;
-    left: 0;
-    height: inherit; }
-    .menubar ul li {
-      padding-top: .3rem;
-      display: block;
-      margin: 2rem; } }
-@media (min-width: 84em) {
-  #place-holder {
-    display: none; } }
+/*fade-in-before-content menu animation*/
 @-moz-keyframes menuLoad {
   from {
     opacity: 0; }
@@ -714,19 +742,24 @@ a:active {
   animation-delay: .3s; }
 
 .card {
-  margin-top: 1.5rem; }
+  margin-top: 1rem; }
 
+/*size fix so masonry doesn't 'stick'*/
+@media (min-width: 35.5em) {
+  .card {
+    max-width: 49.9%; } }
+@media (min-width: 48em) {
+  .card {
+    max-width: 33.28%; } }
+@media (min-width: 84em) {
+  .card {
+    max-width: 20.8%; } }
+/*masonry item*/
 .item {
   float: left;
   -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
   -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
   -o-transition: right .2s ease-in-out, top .2s ease-in-out;
   transition: right .2s ease-in-out, top .2s ease-in-out; }
-
-.list-item p {
-  padding: 1rem; }
-
-.list-blog-header h2 {
-  font-family: "Lora", "Trebuchet", "Trebuchet MS"; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,11 @@
-title: Cardinl: A Masonry Theme for Grav CMS
+title: Cardinl
 author:
   name:
   email:
 blog:
   route: ''
 metadata:
-    description: 'A Grav Skeleton Featuring the Cardinl Theme'
+    description: 'A masonry theme for Grav listing pages; works with the Blog Skeleton.'
 taxonomies: [category,tag,month,author]
 
 owner:

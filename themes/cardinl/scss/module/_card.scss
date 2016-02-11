@@ -1,4 +1,23 @@
+
 .card{
-	margin-top:1.5rem;
+	margin-top:1rem;
+}
+
+/*size fix so masonry doesn't 'stick'*/
+@media (min-width: 35.5em){
+     .card{
+       max-width:49.9%;
+     }
+}
+@media (min-width: 48em){
+     .card{
+       max-width:33.28%;
+     }
+}
+
+@media (min-width: 84em){
+    .card{
+      max-width:20.8%;
+  }
 }
 
