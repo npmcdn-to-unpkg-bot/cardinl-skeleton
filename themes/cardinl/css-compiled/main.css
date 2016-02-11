@@ -435,10 +435,8 @@ th {
 base styles and adjustments
 -----------------------------------------------------------------------------*/
 /*size fix so masonry fills columns appropriately and tiles don't 'stick'.
-This resolves an apparent conflict between this combined implementation of
-Masonry.js and Puregrids. Other elements that are both sized by Puregrids
-and arranged by Masonry are similarly reduced in width by a fraction of
-a percent*/
+Other elements that are both sized by Puregrids and arranged by Masonry are
+similarly reduced in width by a fraction of a percent*/
 .pure-u-1 {
   width: 99.9%; }
 
@@ -514,16 +512,24 @@ a:active {
 adjusting padding, border, and margin of tiles without
 having to adjust column or card sizing*/
 .edge {
-  margin: .8rem;
-  padding: .9rem;
-  border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  -webkit-border-radius: 4px 4px 4px 4px;
-  -webkit-box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
-  box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.25);
+  margin: .7rem;
+  padding: .7rem;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
+  -moz-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
+  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
   background: #FFFEFF; }
 
+@media (min-width: 35.5em) {
+  .edge {
+    margin: .8rem;
+    padding: .8rem; } }
+@media (min-width: 58em) {
+  .edge {
+    margin: .9rem;
+    padding: .9rem; } }
 /*container layout for masonry*/
 .container {
   float: right; }
@@ -681,11 +687,20 @@ navigation bar styles
 @media (min-width: 84em) {
   #place-holder {
     display: none; } }
+/*transitions for reorientation*/
+#navbar {
+  -webkit-transition: width 0.2s, length 0.2s;
+  -moz-transition: width 0.2s, length 0.2s;
+  -ms-transition: width 0.2s, length 0.2s;
+  -o-transition: width 0.2s, length 0.2s;
+  transition: width 0.2s, length 0.2s; }
+
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar {
   z-index: 5;
   float: left;
-  background-color: inherit; }
+  background-color: red;
+  height: 4rem; }
   .menubar li {
     display: inline;
     list-style: none;
@@ -693,7 +708,7 @@ navigation bar styles
     font-family: "Lora", "Trebuchet", "Trebuchet MS";
     font-size: 1.2rem; }
   .menubar ul {
-    margin: 0; }
+    margin: 2; }
 
 /*vertical dispay for large screen sizes*/
 @media (min-width: 84em) {
@@ -757,9 +772,9 @@ navigation bar styles
 /*masonry item*/
 .item {
   float: left;
-  -moz-transition: right .2s ease-in-out, top .2s ease-in-out;
-  -ms-transition: right .2s ease-in-out, top .2s ease-in-out;
-  -o-transition: right .2s ease-in-out, top .2s ease-in-out;
-  transition: right .2s ease-in-out, top .2s ease-in-out; }
+  -moz-transition: right .4s ease-in-out, top .4s ease-in-out;
+  -ms-transition: right .4s ease-in-out, top .4s ease-in-out;
+  -o-transition: right .4s ease-in-out, top .4s ease-in-out;
+  transition: right .4s ease-in-out, top .4s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */

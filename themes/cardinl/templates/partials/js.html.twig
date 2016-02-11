@@ -25,20 +25,58 @@ $(window).load(function () {
 }());
 </script>
 <script>
-        var window_top = $(window);
-        var nav_top = $('#navbar').offset().top;
-        function navbar_stick() {
-            if (window_top.scrollTop() >= nav_top) {
-                $('#navbar').addClass('scroll-stick');
-                $('#place-holder').removeClass('remove');
-            } else {
-                $('#navbar').removeClass('scroll-stick');
-                $('#place-holder').addClass('remove');
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+$(document).ready(function() {
+    var window_top = $(window);
+    var nav_top  = $('#navbar').offset().top;
+    var place = $('#place-holder');
+    var plac_top =0, prev_plac_top = 0;
+    var get_offset = debounce(function() {
+        plac_top = place.offset().top;
+        if(plac_top <= prev_plac_top){
+            if(plac_top > nav_top){
+                 prev_plac_top = plac_top;
+                 nav_top = plac_top;
+            }else{
+                nav_top = $('#navbar').offset().top;
             }
+            }
+        }, 2);
+    var navbar_stick = debounce(function() {
+        get_offset();
+        if (window_top.scrollTop() >= nav_top) {
+            $('#navbar').addClass('scroll-stick');
+            $('#place-holder').removeClass('remove');
+        } else {
+            $('#navbar').removeClass('scroll-stick');
+            $('#place-holder').addClass('remove');
         }
-        $(window).load(function () {
-           $(window).scroll(navbar_stick);
-           navbar_stick();
-           $('.item').addClass('container-load');
-        });
+    }, 7);
+    $(window).load(function () {
+         $(window).scrollTop(0);// reset for scrolled page refesh
+        navbar_stick();
+        $(window).scroll(navbar_stick);
+        $(window).resize(navbar_stick);
+    });
+});
+
 </script>

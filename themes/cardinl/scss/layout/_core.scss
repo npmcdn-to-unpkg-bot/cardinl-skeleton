@@ -4,10 +4,8 @@ base styles and adjustments
 -----------------------------------------------------------------------------*/
 
 /*size fix so masonry fills columns appropriately and tiles don't 'stick'.
-This resolves an apparent conflict between this combined implementation of
-Masonry.js and Puregrids. Other elements that are both sized by Puregrids
-and arranged by Masonry are similarly reduced in width by a fraction of
-a percent*/
+Other elements that are both sized by Puregrids and arranged by Masonry are
+similarly reduced in width by a fraction of a percent*/
 .pure-u-1{
   width:99.9%;
 }

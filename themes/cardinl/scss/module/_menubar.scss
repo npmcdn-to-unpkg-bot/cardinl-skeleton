@@ -7,11 +7,20 @@ navigation bar styles
        display:none;
     }
 }
+/*transitions for reorientation*/
+#navbar{
+   -webkit-transition: width 0.2s, length 0.2s;
+    -moz-transition: width 0.2s, length 0.2s;
+    -ms-transition: width 0.2s, length 0.2s;
+    -o-transition: width 0.2s, length 0.2s;
+    transition: width 0.2s, length 0.2s;
+}
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar{
     z-index:5;
     float:left;
-    background-color:inherit;
+    background-color:red;
+    height:4rem;
     li{
 		   display:inline;
 		   list-style:none;
@@ -20,7 +29,7 @@ navigation bar styles
 		   font-size:$h6-font-size;
 	  }
     ul{
-      margin:0;
+      margin:2;
     }
 }
 /*vertical dispay for large screen sizes*/
