@@ -1,6 +1,7 @@
 <script>
 ;(function ($, window, document, undefined) {
     "use strict";
+
     function debounce(func, wait, immediate) {
         var timeout;
         return function () {
@@ -20,59 +21,72 @@
             }
         };
     }
-    $(window).load(function () {
-        var grid = document.querySelector('#masonry');
-        var msnry;
-        imagesLoaded(grid, function () {
-            if (Modernizr.csstransitions) {
-                msnry = new Masonry(grid, {
-                    itemSelector: '.item',
-                    columnWidth: 1,
-                    percentPosition: true,
-                    transitionDuration: 0
-                });
-            } else {
-                msnry = new Masonry(grid, {
-                    itemSelector: '.item',
-                    columnWidth: 1,
-                    percentPosition: true,
-                    transitionDuration: '.2s'
-                });
-            }
-        });
-    });
-    $(function () {
-        var $window_top = $(window);
-        var $nav_top = $('#navbar').offset().top;
-        var $place = $('#place-holder');
-        var $place_top = 0;
-        var prev_place_top = 0;
-        var get_offset = debounce(function () { 
-            $place_top = $place.offset().top;
-            if ($place_top <= prev_place_top) {
-                if ($place_top > $nav_top) {
-                    prev_place_top = $place_top;
-                    $nav_top = $place_top;
+
+    //function throttle(){}
+
+    var Mason = {
+        grid: document.querySelector('#masonry'),
+        msnry: undefined,
+        init: function(){
+            imagesLoaded(Mason.grid, function () {
+                if (Modernizr.csstransitions) {
+                    Mason.msnry = new Masonry(Mason.grid, {
+                        itemSelector: '.item',
+                        columnWidth: 1,
+                        percentPosition: true,
+                        transitionDuration: 0
+                    });
                 } else {
-                    $nav_top = $('#navbar').offset().top;
+                    Mason.msnry = new Masonry(Mason.grid, {
+                        itemSelector: '.item',
+                        columnWidth: 1,
+                        percentPosition: true,
+                        transitionDuration: '.2s'
+                    });
+                }
+            });
+        }
+    };
+
+
+    var ScrollMenu = {
+        $window_top: $(window),
+        $nav_top: $('#navbar').offset().top, // navigation bar offset
+        $place: $('#place-holder'), // placeholder div that appears after navbar scrolls
+        $place_top: 0,
+        prev_place_top: 0,
+        getOffset: function () { // improves menu 'jump' when transitioning between fixed and relative positions after window resize
+            ScrollMenu.$place_top = ScrollMenu.$place.offset().top; // get top of placeholder div
+            if (ScrollMenu.$place_top <= ScrollMenu.prev_place_top) { // if the placeholder is in position
+                if (ScrollMenu.$place_top > ScrollMenu.$nav_top) {          // if scrolled up beyond position of placeholder
+                    ScrollMenu.prev_place_top = ScrollMenu.$place_top;          // update previous position of placeholder
+                    ScrollMenu.$nav_top = ScrollMenu.$place_top;                // position navbar in the placholders prev. position
+                } else {
+                    ScrollMenu.$nav_top = $('#navbar').offset().top; // set navbar to its current position
                 }
             }
-        }, 5);
-        var navbar_stick = debounce(function () {
-            get_offset();
-            if ($window_top.scrollTop() >= $nav_top) {
-                $('#navbar').addClass('scroll-stick');
-                $('#place-holder').removeClass('remove');
-            } else {
-                $('#navbar').removeClass('scroll-stick');
-                $('#place-holder').addClass('remove');
+        },
+        navbarStick: function () {
+            ScrollMenu.getOffset(); // update offsets for elements
+            if (ScrollMenu.$window_top.scrollTop() >= ScrollMenu.$nav_top) { // when the window scrolls below the top of the navbar
+                $('#navbar').addClass('scroll-stick');    // make the navbar stick to the top of the window
+                $('#place-holder').removeClass('remove'); // allow the placeholder into the document flow
+            } else {                                  // otherwise
+                $('#navbar').removeClass('scroll-stick');  // unstick navbar
+                $('#place-holder').addClass('remove');     // remove placeholder div
             }
-        }, 0);
-        $(window).load(function () {
-            navbar_stick();
-        });
-        $(window).scroll(navbar_stick);
-        $(window).resize(navbar_stick);
+        }
+    };
+
+    $(window).bind("load", function (e) {
+        Mason.init();
     });
+
+    $(window).bind("resize scroll load", function (e) {
+        ScrollMenu.navbarStick();
+    });
+
+
+
 })( window.jQuery, window, document);
 </script>
