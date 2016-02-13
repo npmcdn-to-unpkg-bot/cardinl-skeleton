@@ -1,7 +1,26 @@
 <script>
-(function () {
+;(function ($, window, document, undefined) {
     "use strict";
-$(window).load(function () {
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this;
+            var args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) {
+                    func.apply(context, args);
+                }
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    }
+    $(window).load(function () {
         var grid = document.querySelector('#masonry');
         var msnry;
         imagesLoaded(grid, function () {
@@ -22,61 +41,38 @@ $(window).load(function () {
             }
         });
     });
-}());
-</script>
-<script>
-
-// Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
-
-$(document).ready(function() {
-    var window_top = $(window);
-    var nav_top  = $('#navbar').offset().top;
-    var place = $('#place-holder');
-    var plac_top =0, prev_plac_top = 0;
-    var get_offset = debounce(function() {
-        plac_top = place.offset().top;
-        if(plac_top <= prev_plac_top){
-            if(plac_top > nav_top){
-                 prev_plac_top = plac_top;
-                 nav_top = plac_top;
-            }else{
-                nav_top = $('#navbar').offset().top;
+    $(function () {
+        var $window_top = $(window);
+        var $nav_top = $('#navbar').offset().top;
+        var $place = $('#place-holder');
+        var $place_top = 0;
+        var prev_place_top = 0;
+        var get_offset = debounce(function () { 
+            $place_top = $place.offset().top;
+            if ($place_top <= prev_place_top) {
+                if ($place_top > $nav_top) {
+                    prev_place_top = $place_top;
+                    $nav_top = $place_top;
+                } else {
+                    $nav_top = $('#navbar').offset().top;
+                }
             }
+        }, 5);
+        var navbar_stick = debounce(function () {
+            get_offset();
+            if ($window_top.scrollTop() >= $nav_top) {
+                $('#navbar').addClass('scroll-stick');
+                $('#place-holder').removeClass('remove');
+            } else {
+                $('#navbar').removeClass('scroll-stick');
+                $('#place-holder').addClass('remove');
             }
-        }, 2);
-    var navbar_stick = debounce(function() {
-        get_offset();
-        if (window_top.scrollTop() >= nav_top) {
-            $('#navbar').addClass('scroll-stick');
-            $('#place-holder').removeClass('remove');
-        } else {
-            $('#navbar').removeClass('scroll-stick');
-            $('#place-holder').addClass('remove');
-        }
-    }, 7);
-    $(window).load(function () {
-         $(window).scrollTop(0);// reset for scrolled page refesh
-        navbar_stick();
+        }, 0);
+        $(window).load(function () {
+            navbar_stick();
+        });
         $(window).scroll(navbar_stick);
         $(window).resize(navbar_stick);
     });
-});
-
+})( window.jQuery, window, document);
 </script>

@@ -512,27 +512,32 @@ a:active {
 adjusting padding, border, and margin of tiles without
 having to adjust column or card sizing*/
 .edge {
-  margin: .7rem;
-  padding: .7rem;
+  margin: .4rem;
+  padding: .4rem;
   border-radius: 2px;
+  background: #FFFEFF;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -webkit-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
   -moz-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
-  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
-  background: #FFFEFF; }
+  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39); }
 
 @media (min-width: 35.5em) {
   .edge {
-    margin: .8rem;
-    padding: .8rem; } }
+    margin: .5rem;
+    padding: .5rem; } }
 @media (min-width: 58em) {
   .edge {
-    margin: .9rem;
-    padding: .9rem; } }
+    margin: .6rem;
+    padding: .6rem; } }
+@media (min-width: 70em) {
+  .edge {
+    margin: .7rem;
+    padding: .7rem; } }
 /*container layout for masonry*/
 .container {
-  float: right; }
+  float: right;
+  background-color: inherit; }
 
 /*page-loading animation, gives masonry time to adjust */
 @-moz-keyframes containerLoad {
@@ -578,7 +583,7 @@ header styles
 -----------------------------------------------------------------------------*/
 /*header first line*/
 .title {
-  display: block;
+  display: inline;
   padding: 0;
   font-size: 2.028rem;
   font-family: "Lora", "Trebuchet", "Trebuchet MS"; }
@@ -601,7 +606,7 @@ header styles
     font-size: 4.3rem; } }
 /*header second line*/
 .subtitle {
-  display: block;
+  display: inline;
   font-size: 1rem;
   font-weight: 400;
   padding: 0rem 0rem .75rem .5rem; }
@@ -654,7 +659,7 @@ header styles
 #header {
   padding: 0rem 0rem 0rem 1rem;
   float: left;
-  height: 6.9rem; }
+  height: 7.2rem; }
 
 @media (min-width: 72em) {
   #header {
@@ -689,17 +694,17 @@ navigation bar styles
     display: none; } }
 /*transitions for reorientation*/
 #navbar {
-  -webkit-transition: width 0.2s, length 0.2s;
-  -moz-transition: width 0.2s, length 0.2s;
-  -ms-transition: width 0.2s, length 0.2s;
-  -o-transition: width 0.2s, length 0.2s;
-  transition: width 0.2s, length 0.2s; }
+  -webkit-transition: height 0.13s;
+  -moz-transition: height 0.13s;
+  -ms-transition: height 0.13s;
+  -o-transition: height 0.13s;
+  transition: height 0.13s; }
 
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar {
   z-index: 5;
   float: left;
-  background-color: red;
+  background-color: inherit;
   height: 4rem; }
   .menubar li {
     display: inline;
@@ -716,6 +721,7 @@ navigation bar styles
     height: inherit; }
     .menubar li {
       padding-top: 1rem;
+      padding-bottom: 3rem;
       display: block;
       margin: 2rem;
       font-size: 1.728rem; } }
@@ -772,9 +778,9 @@ navigation bar styles
 /*masonry item*/
 .item {
   float: left;
-  -moz-transition: right .4s ease-in-out, top .4s ease-in-out;
-  -ms-transition: right .4s ease-in-out, top .4s ease-in-out;
-  -o-transition: right .4s ease-in-out, top .4s ease-in-out;
-  transition: right .4s ease-in-out, top .4s ease-in-out; }
+  -moz-transition: right .3s ease-in-out, top .3s ease-in-out;
+  -ms-transition: right .3s ease-in-out, top .3s ease-in-out;
+  -o-transition: right .3s ease-in-out, top .3s ease-in-out;
+  transition: right .3s ease-in-out, top .3s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */
