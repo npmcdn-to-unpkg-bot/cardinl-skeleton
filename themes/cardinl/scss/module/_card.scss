@@ -3,7 +3,7 @@
 	margin-top:1rem;
 }
 
-/*size fix so masonry doesn't 'stick'*/
+/*size fix so Masonry tiles don't 'stick'*/
 @media (min-width: 35.5em){
      .card{
        max-width:49.9%;
@@ -17,7 +17,7 @@
 
 @media (min-width: 84em){
     .card{
-      max-width:20.8%;
+      max-width:24%;
   }
 }
 

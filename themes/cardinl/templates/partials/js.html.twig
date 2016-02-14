@@ -2,28 +2,6 @@
 ;(function ($, window, document, undefined) {
     "use strict";
 
-    function debounce(func, wait, immediate) {
-        var timeout;
-        return function () {
-            var context = this;
-            var args = arguments;
-            var later = function () {
-                timeout = null;
-                if (!immediate) {
-                    func.apply(context, args);
-                }
-            };
-            var callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) {
-                func.apply(context, args);
-            }
-        };
-    }
-
-    //function throttle(){}
-
     var Mason = {
         grid: document.querySelector('#masonry'),
         msnry: undefined,
@@ -32,7 +10,7 @@
                 if (Modernizr.csstransitions) {
                     Mason.msnry = new Masonry(Mason.grid, {
                         itemSelector: '.item',
-                        columnWidth: 1,
+                        columnWidth: 1, /*columns are sized with Pure grids*/
                         percentPosition: true,
                         transitionDuration: 0
                     });
@@ -48,45 +26,54 @@
         }
     };
 
-
     var ScrollMenu = {
-        $window_top: $(window),
-        $nav_top: $('#navbar').offset().top, // navigation bar offset
-        $place: $('#place-holder'), // placeholder div that appears after navbar scrolls
-        $place_top: 0,
-        prev_place_top: 0,
-        getOffset: function () { // improves menu 'jump' when transitioning between fixed and relative positions after window resize
-            ScrollMenu.$place_top = ScrollMenu.$place.offset().top; // get top of placeholder div
-            if (ScrollMenu.$place_top <= ScrollMenu.prev_place_top) { // if the placeholder is in position
-                if (ScrollMenu.$place_top > ScrollMenu.$nav_top) {          // if scrolled up beyond position of placeholder
-                    ScrollMenu.prev_place_top = ScrollMenu.$place_top;          // update previous position of placeholder
-                    ScrollMenu.$nav_top = ScrollMenu.$place_top;                // position navbar in the placholders prev. position
-                } else {
-                    ScrollMenu.$nav_top = $('#navbar').offset().top; // set navbar to its current position
-                }
-            }
+        $window: $(window),
+        $navbar: $('#navbar'),
+        $nav_top: $('#navbar').offset().top,
+        $place: $('#place-holder'),
+        setOffset: function () {/*updates offset for navbar:
+                                     fix for menu 'jumping' when header shrinks or grows on resize &
+                                     permits menu to 'stick-on-scroll' from varying or changing starting points
+                                     (i.e., this function allows the header above the menu to be resized easily)*/
+              if (ScrollMenu.$navbar.offset().top >=  ScrollMenu.$place.offset().top){
+                ScrollMenu.$nav_top = $('#navbar').offset().top;
+              }
         },
         navbarStick: function () {
-            ScrollMenu.getOffset(); // update offsets for elements
-            if (ScrollMenu.$window_top.scrollTop() >= ScrollMenu.$nav_top) { // when the window scrolls below the top of the navbar
-                $('#navbar').addClass('scroll-stick');    // make the navbar stick to the top of the window
-                $('#place-holder').removeClass('remove'); // allow the placeholder into the document flow
-            } else {                                  // otherwise
-                $('#navbar').removeClass('scroll-stick');  // unstick navbar
-                $('#place-holder').addClass('remove');     // remove placeholder div
+            ScrollMenu.setOffset();
+            if (ScrollMenu.$window.scrollTop() >= ScrollMenu.$nav_top) {
+                $('#navbar').addClass('scroll-stick');
+                $('#place-holder').removeClass('remove');
+            } else {
+                $('#navbar').removeClass('scroll-stick');
+                $('#place-holder').addClass('remove');
             }
+        },
+        throttle: function(funct, limit) {
+                    var wait = false;
+                    return function() {
+                        if(!wait) {
+                            wait = true;
+                            funct.apply(this, arguments);
+                            setTimeout(function() {
+                                wait = false
+                            }, limit);
+                        }
+                    };
         }
     };
 
-    $(window).bind("load", function (e) {
+    $(window).on("load", function (e) {
         Mason.init();
-    });
-
-    $(window).bind("resize scroll load", function (e) {
         ScrollMenu.navbarStick();
     });
+
+    $(window).on("resize scroll", ScrollMenu.throttle(function (e) {
+        ScrollMenu.navbarStick();
+    }, 10));
 
 
 
 })( window.jQuery, window, document);
 </script>
+

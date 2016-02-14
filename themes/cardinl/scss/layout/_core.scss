@@ -3,9 +3,9 @@
 base styles and adjustments
 -----------------------------------------------------------------------------*/
 
-/*size fix so masonry fills columns appropriately and tiles don't 'stick'.
+/*size fix so Masonry fills columns appropriately and tiles don't 'stick'.
 Other elements that are both sized by Puregrids and arranged by Masonry are
-similarly reduced in width by a fraction of a percent*/
+similarly reduced in width*/
 .pure-u-1{
   width:99.9%;
 }
@@ -68,9 +68,6 @@ a:active  {
 }
 .left{
       float: left;
-}
-.hidden {
-      visibility:hidden;
 }
 .remove{
       display:none;

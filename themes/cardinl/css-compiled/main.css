@@ -434,9 +434,9 @@ th {
 /*-----------------------------------------------------------------------------
 base styles and adjustments
 -----------------------------------------------------------------------------*/
-/*size fix so masonry fills columns appropriately and tiles don't 'stick'.
+/*size fix so Masonry fills columns appropriately and tiles don't 'stick'.
 Other elements that are both sized by Puregrids and arranged by Masonry are
-similarly reduced in width by a fraction of a percent*/
+similarly reduced in width*/
 .pure-u-1 {
   width: 99.9%; }
 
@@ -498,9 +498,6 @@ a:active {
 
 .left {
   float: left; }
-
-.hidden {
-  visibility: hidden; }
 
 .remove {
   display: none; }
@@ -689,9 +686,13 @@ header styles
 navigation bar styles
 -----------------------------------------------------------------------------*/
 /*placeholder to prevent 'jump' when switching menu to fixed position */
+#place-holder {
+  height: 4rem;
+  float: left; }
+
 @media (min-width: 84em) {
   #place-holder {
-    display: none; } }
+    height: 0; } }
 /*transitions for reorientation*/
 #navbar {
   -webkit-transition: height 0.13s;
@@ -765,7 +766,7 @@ navigation bar styles
 .card {
   margin-top: 1rem; }
 
-/*size fix so masonry doesn't 'stick'*/
+/*size fix so Masonry tiles don't 'stick'*/
 @media (min-width: 35.5em) {
   .card {
     max-width: 49.9%; } }
@@ -774,7 +775,7 @@ navigation bar styles
     max-width: 33.28%; } }
 @media (min-width: 84em) {
   .card {
-    max-width: 20.8%; } }
+    max-width: 24%; } }
 /*masonry item*/
 .item {
   float: left;

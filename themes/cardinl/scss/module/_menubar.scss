@@ -2,9 +2,14 @@
 navigation bar styles
 -----------------------------------------------------------------------------*/
 /*placeholder to prevent 'jump' when switching menu to fixed position */
+#place-holder{
+       height:4rem;
+       float:left;
+    }
+
 @media (min-width: 84em){
   #place-holder{
-       display:none;
+       height:0;
     }
 }
 /*transitions for reorientation*/
