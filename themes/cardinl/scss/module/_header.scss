@@ -68,22 +68,15 @@ header styles
 @-webkit-keyframes headerLoad { from { opacity:0; } to { opacity:1; } }
 @keyframes headerLoad { from { opacity:0; } to { opacity:1; } }
 .header-load{
-  opacity:0;
-  -webkit-animation:headerLoad linear 1;
-  -moz-animation:headerLoad linear 1;
-  animation:headerLoad linear 1;
-
--webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
--webkit-animation-duration:.15s;
-  -moz-animation-duration:.15s;
-  animation-duration:.15s;
-
-  -webkit-animation-delay: .15s;
-  -moz-animation-delay: .15s;
-  animation-delay: .15s;
+ 	opacity:0;
+	-webkit-animation:headerLoad linear 1;
+	animation:headerLoad linear 1;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:.15s;
+	animation-duration:.15s;
+	-webkit-animation-delay: .15s;
+	animation-delay: .15s;
 }
 /*content-based breakpoints for responsive header height*/
 #header{

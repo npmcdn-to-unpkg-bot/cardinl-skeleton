@@ -4,13 +4,9 @@ having to adjust column or card sizing*/
 .edge{
 	margin: .4rem;
 	padding: .4rem;
-	border-radius: 2px;
 	background: $alt-background;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -webkit-box-shadow: 1px 3px 5px 1px rgba(75,70,68,0.39);
-    -moz-box-shadow: 1px 3px 5px 1px rgba(75,70,68,0.39);
     box-shadow: 1px 3px 5px 1px rgba(75,70,68,0.39);
+    border-radius: 2px;
 }
 
 

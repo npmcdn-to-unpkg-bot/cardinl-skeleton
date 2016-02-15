@@ -511,13 +511,9 @@ having to adjust column or card sizing*/
 .edge {
   margin: .4rem;
   padding: .4rem;
-  border-radius: 2px;
   background: #FFFEFF;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -webkit-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
-  -moz-box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
-  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39); }
+  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
+  border-radius: 2px; }
 
 @media (min-width: 35.5em) {
   .edge {
@@ -555,24 +551,12 @@ having to adjust column or card sizing*/
 .container-load {
   opacity: 0;
   -webkit-animation: containerLoad linear 1;
-  -moz-animation: containerLoad linear 1;
-  -ms-animation: containerLoad linear 1;
-  -o-animation: containerLoad linear 1;
   animation: containerLoad linear 1;
   -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: .4s;
-  -moz-animation-duration: .4s;
-  -ms-animation-duration: .4s;
-  -o-animation-duration: .4s;
   animation-duration: .4s;
   -webkit-animation-delay: .4s;
-  -moz-animation-delay: .4s;
-  -ms-animation-delay: .4s;
-  -o-animation-delay: .4s;
   animation-delay: .4s; }
 
 /*-----------------------------------------------------------------------------
@@ -640,16 +624,12 @@ header styles
 .header-load {
   opacity: 0;
   -webkit-animation: headerLoad linear 1;
-  -moz-animation: headerLoad linear 1;
   animation: headerLoad linear 1;
   -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: .15s;
-  -moz-animation-duration: .15s;
   animation-duration: .15s;
   -webkit-animation-delay: .15s;
-  -moz-animation-delay: .15s;
   animation-delay: .15s; }
 
 /*content-based breakpoints for responsive header height*/
@@ -696,9 +676,6 @@ navigation bar styles
 /*transitions for reorientation*/
 #navbar {
   -webkit-transition: height 0.13s;
-  -moz-transition: height 0.13s;
-  -ms-transition: height 0.13s;
-  -o-transition: height 0.13s;
   transition: height 0.13s; }
 
 /*vertical-to-horizontal navigation-menu styles*/
@@ -751,16 +728,12 @@ navigation bar styles
 .menu-load {
   opacity: 0;
   -webkit-animation: menuLoad linear 1;
-  -moz-animation: menuLoad linear 1;
   animation: menuLoad linear 1;
   -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: .3s;
-  -moz-animation-duration: .3s;
   animation-duration: .3s;
   -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
   animation-delay: .3s; }
 
 .card {
@@ -779,9 +752,7 @@ navigation bar styles
 /*masonry item*/
 .item {
   float: left;
-  -moz-transition: right .3s ease-in-out, top .3s ease-in-out;
-  -ms-transition: right .3s ease-in-out, top .3s ease-in-out;
-  -o-transition: right .3s ease-in-out, top .3s ease-in-out;
+  -webkit-transition: right .3s ease-in-out, top .3s ease-in-out;
   transition: right .3s ease-in-out, top .3s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */

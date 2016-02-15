@@ -15,10 +15,7 @@ navigation bar styles
 /*transitions for reorientation*/
 #navbar{
    -webkit-transition: height 0.13s;
-    -moz-transition: height 0.13s;
-    -ms-transition: height 0.13s;
-    -o-transition: height 0.13s;
-    transition: height 0.13s;
+   transition: height 0.13s;
 }
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar{
@@ -64,20 +61,17 @@ navigation bar styles
 @keyframes menuLoad { from { opacity:0; } to { opacity:1; } }
 .menu-load{
   opacity:0;
+
   -webkit-animation:menuLoad linear 1;
-  -moz-animation:menuLoad linear 1;
   animation:menuLoad linear 1;
 
--webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
--webkit-animation-duration:.3s;
-  -moz-animation-duration:.3s;
+  -webkit-animation-duration:.3s;
   animation-duration:.3s;
 
   -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
   animation-delay: .3s;
 
 }

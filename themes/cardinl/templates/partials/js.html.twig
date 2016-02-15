@@ -49,14 +49,14 @@
                 $('#place-holder').addClass('remove');
             }
         },
-        throttle: function(funct, limit) {
+        throttle: function (funct, limit) {
                     var wait = false;
                     return function() {
                         if(!wait) {
                             wait = true;
                             funct.apply(this, arguments);
                             setTimeout(function() {
-                                wait = false
+                                wait = false;
                             }, limit);
                         }
                     };
@@ -70,9 +70,7 @@
 
     $(window).on("resize scroll", ScrollMenu.throttle(function (e) {
         ScrollMenu.navbarStick();
-    }, 10));
-
-
+    }, 5));
 
 })( window.jQuery, window, document);
 </script>
