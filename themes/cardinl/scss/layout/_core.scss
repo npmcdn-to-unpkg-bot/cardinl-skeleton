@@ -23,7 +23,7 @@ html {
 body {
   color: $core-text-color;
   line-height: $base-line-height;
-  background-color: $core-background;
+  font-family: $base-font-family;
   height:100%;
   bottom:0;
   margin: 0 0 $footer-height; /*sticky footer styling*/

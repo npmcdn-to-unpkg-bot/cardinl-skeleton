@@ -4,30 +4,32 @@ header styles
 
 /*header first line*/
 .title{
-	display:inline;
+	display:block;
 	padding: 0;
-	font-size: $h4-font-size + .3;
+	font-size: $h3-font-size;
 	font-family:$heading-font-stack;
+	font-style: italic;
+	color:$core-text-color;
 }
 /*content-based breakpoints for responsive title text*/
 @media (min-width: 35.5em){
 	.title{
-		font-size: $h3-font-size;
+		font-size: $h3-font-size +.5;
     }
 }
-@media (min-width: 42em){
+@media (min-width: 48em){
 	.title{
-        font-size: $h3-font-size +.1;
+        font-size: $h3-font-size +1;
     }
 }
 @media (min-width: 62em){
 	.title{
-        font-size: $h3-font-size +.3;
+        font-size: $h2-font-size +.3;
     }
 }
 @media (min-width: 72em){
 	.title{
-		font-size: $h2-font-size;
+		font-size: $h1-font-size - .5;
     }
 }
 @media (min-width: 86em){
@@ -37,10 +39,11 @@ header styles
 }
 /*header second line*/
 .subtitle{
-	display:inline;
+	display:block;
 	font-size: $base-font-size;
 	font-weight: 400;
-	padding: 0rem 0rem .75rem .5rem;
+	font-style: italic;
+	color:$core-text-color;
 }
 /*content-based breakpoints for responsive sub-title text*/
 @media (min-width: 25em){
@@ -80,22 +83,47 @@ header styles
 }
 /*content-based breakpoints for responsive header height*/
 #header{
-	padding: 0rem 0rem 0rem 1rem;
+	padding: 0rem 0rem 0rem .4rem;
 	float:left;
 	height:$header-height - 3.8;
+	background-color: inherit;
+}
+
+@media (min-width: 48em){
+	#header{
+		padding: 0rem 0rem 0rem .6rem;
+		height:$header-height - 2.8;
+    }
+}
+@media (min-width: 60em){
+	#header{
+		padding: 0rem 0rem 0rem .8rem;
+		height:$header-height - 1.5;
+    }
 }
 @media (min-width: 72em){
 	#header{
-	    height:$header-height - 3.5;
+		padding: 0rem 0rem 0rem 1rem;
+	    height:$header-height - .5;
     }
 }
-@media (min-width: 84em){
+@media (min-width: 86em){
 	#header{
-	    height:$header-height;
+		padding: 0rem 0rem 0rem 1.2rem;
+	    height:$header-height +.8;
     }
 }
 /*conserve screen space for mobile sizes*/
 #topline{
   margin-top:0;
   margin-bottom:0;
+}
+
+.list-blog-header{
+	h2, h3{
+		font-family: $sub-heading-font-stack;
+		margin:0;
+		padding-bottom:.5rem;
+	}
+	
 }

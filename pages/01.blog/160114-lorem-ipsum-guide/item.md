@@ -3,7 +3,7 @@ title: A Brief Guide to Lorem Ipsum
 date: 01:00 12/15/2015
 slug: a-brief-guide-to-lorem-ipsum
 menu: Guide to Lorem Ipsum
-thumbnail_image_file: fence-vine-thumb.jpg
+thumbnail_image_file: flickr_carlos_zgz_2_thumb.jpg
 taxonomy:
     category: blog
     tag: [dolor, elit, ante, amet, metus]

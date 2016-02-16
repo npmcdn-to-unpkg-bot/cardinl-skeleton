@@ -1,11 +1,11 @@
 // Base Sizes
 $base-font-size:				1rem !default;
 $base-line-height:				1.6 !default;
-$base-font-family:              'Trebuchet', 'Trebuchet MS';
+$base-font-family:              'Catamaran', sans-serif;
 $base-font-weight:              400 !default;
 
 // Headings
-$h1-font-size:					$base-font-size * 4.3 !default;
+$h1-font-size:					$base-font-size * 5.3 !default;
 $h2-font-size:					$base-font-size * 3.583 !default;
 $h3-font-size:					$base-font-size * 2.488 !default;
 $h4-font-size:					$base-font-size * 1.728 !default;
@@ -15,6 +15,6 @@ $h6-font-size:					$base-font-size * 1.2 !default;
 // Spacing
 $leading-margin:				$base-line-height * 1rem !default;
 
-$heading-font-stack:            'Lora', 'Trebuchet', 'Trebuchet MS';
-$sub-heading-font-stack:        'Lora', 'Trebuchet', 'Trebuchet MS';
+$heading-font-stack:            'Merriweather','Georgia','Utopia','Charter',serif;
+$sub-heading-font-stack:        'Catamaran', sans-serif;
 

@@ -18,11 +18,11 @@
             <em>{{ page.date|date("d M Y") }}</em>
         </span>
         {% if page.taxonomy.tag %}
-        <span class="tags">
+        <div class="tags">
             {% for tag in page.taxonomy.tag %}
             <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
             {% endfor %}
-        </span>
+        </div>
         {% endif %}
 
         {% if header_image %}

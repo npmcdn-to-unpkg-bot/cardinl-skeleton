@@ -1,6 +1,8 @@
 
 .card{
-	margin-top:1rem;
+	h4{
+    font-family: $sub-heading-font-stack;
+  }
 }
 
 /*size fix so Masonry tiles don't 'stick'*/

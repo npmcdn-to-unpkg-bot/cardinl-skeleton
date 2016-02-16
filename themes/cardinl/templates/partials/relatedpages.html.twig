@@ -7,7 +7,7 @@
                    <span>{{ page.date|date(config.system.pages.dateformat.short) }}</span>
                 </div>
                 {% set header_image_media = related.media.images|first %}
-                {{ header_image_media.cropZoom(300, 150).html }}
+                {{ header_image_media.cropZoom(600, 300).html }}
                 <h3><a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a></h3>
                 {{ related.content|truncate(300) }}
                <p><a href="{{ related.url }}">[click here to read more]</a></p>

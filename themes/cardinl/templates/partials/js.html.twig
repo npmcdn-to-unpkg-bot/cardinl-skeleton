@@ -68,9 +68,9 @@
         ScrollMenu.navbarStick();
     });
 
-    $(window).on("resize scroll", ScrollMenu.throttle(function (e) {
+    $(window).on("resize scroll", function (e) {
         ScrollMenu.navbarStick();
-    }, 5));
+    });
 
 })( window.jQuery, window, document);
 </script>

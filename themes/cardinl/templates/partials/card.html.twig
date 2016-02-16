@@ -5,13 +5,13 @@
 
 <div class="list-blog-header">
     {% if page.header.link %}
-        <h4>
+        <h3>
             <a href="{{ page.header.link }}">{{ page.title }}</a>
-        </h4>
+        </h3>
     {% else %}
-        <h4>
+        <h3>
             <a href="{{ page.url }}">{{ page.title }}</a>
-        </h4>
+        </h3>
     {% endif %}
     {% if thumbnail_image %}
         {% if thumbnail_image_file %}

@@ -3,7 +3,7 @@ title: Top Ten Lorem Ipsum
 date: 12:34 12/01/2015
 slug: top-ten-lorem-ipsum
 menu: Lorem Ipsum
-thumbnail_image_file: red-fence-thumb.jpg
+thumbnail_image_file: unsplash_alex_jones_thumb.jpg
 taxonomy:
     category: blog
     tag: [lorem, ipsum, mauris, porta]

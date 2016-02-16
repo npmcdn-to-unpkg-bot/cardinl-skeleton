@@ -2,7 +2,7 @@
 title: A Condensed Step-by-Step Guide to Lorem Ipsum
 date: 13:34 1/17/2016
 slug: condensed-step-by-step-guide-to-lorem-ipsum
-thumbnail_image_file: planters-thumb.jpg
+thumbnail_image_file: unsplash_sergio_rola_thumb.jpg
 menu: Lorem
 taxonomy:
     category: blog

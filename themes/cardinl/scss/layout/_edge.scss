@@ -2,7 +2,7 @@
 adjusting padding, border, and margin of tiles without
 having to adjust column or card sizing*/
 .edge{
-	margin: .4rem;
+	margin: .3rem;
 	padding: .4rem;
 	background: $alt-background;
     box-shadow: 1px 3px 5px 1px rgba(75,70,68,0.39);
@@ -12,19 +12,19 @@ having to adjust column or card sizing*/
 
 @media (min-width: 35.5em){
 	.edge{
-	    margin: .5rem;
+	    margin: .4rem;
 	    padding: .5rem;
     }
 }
 @media (min-width: 58em){
 	.edge{
-	    margin: .6rem;
+	    margin: .5rem;
 	    padding: .6rem;
     }
 }
 @media (min-width: 70em){
     .edge{
-	    margin: .7rem;
+	    margin: .6rem;
 	    padding: .7rem;
     }
 }

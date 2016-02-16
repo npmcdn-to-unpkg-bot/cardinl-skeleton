@@ -12,18 +12,20 @@
 
 {% endif %}
 
-{% if config.plugins.taxonomylist.enabled %}
-<div class="pure-u-1 pure-u-md-1-3 pure-u-xl-1-4 card item">
+
+<div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-xl-1-4 card item">
+
   <div class="edge">
+    {% if config.plugins.taxonomylist.enabled %}
     <div>
-    <h4>Tags</h4>
+    <h3>Tags</h3>
     {% include 'partials/taxonomylist.html.twig' with {'base_url': base_url, 'taxonomy':'tag'} %}
     </div>
-{% endif %}
+   {% endif %}
 
 {% if config.plugins.feed.enabled %}
 <div>
-    <h4>Syndicate</h4>
+    <h3>Syndicate</h3>
     <a class="button" href="{{ blog.url }}.atom"><i class="fa fa-rss"></i> Atom 1.0</a>
     <a class="button" href="{{ blog.url }}.rss"><i class="fa fa-rss"></i> RSS</a>
 </div>
@@ -31,7 +33,7 @@
 
 {% if config.plugins.simplesearch.enabled %}
 <div>
-    <h4>Keyword Search</h4>
+    <h3>Keyword Search</h3>
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>    
 </div>

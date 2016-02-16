@@ -28,26 +28,43 @@
     margin: auto;
     padding:0 2px
 }
+.rrssb-buttons li.rrssb-facebook a:link{
+    background-color: #8c8c8c !important;
+}
+.rrssb-buttons li.rrssb-tumblr a:link{
+    background-color: #8c8c8c !important;
+}
+.rrssb-buttons li.rrssb-twitter a:link{
+    background-color: #8c8c8c !important;
+}
+.rrssb-buttons li.rrssb-googleplus a:link{
+    background-color: #8c8c8c !important;
+}
+.rrssb-buttons li.rrssb-reddit a:link{
+    background-color: #8c8c8c !important;
+}
+.rrssb-buttons li.rrssb-pinterest a:link{
+    background-color: #8c8c8c !important;
+}
 .rrssb-buttons li.rrssb-facebook a:hover{
-    background-color: #306199;
+    background-color: #306199 !important;
 }
 .rrssb-buttons li.rrssb-tumblr a:hover{
-    background-color: #32506d;
+    background-color: #32506d !important;
 }
 .rrssb-buttons li.rrssb-twitter a:hover{
-    background-color: #26c4f1;
+    background-color: #26c4f1 !important;
 }
 .rrssb-buttons li.rrssb-googleplus a:hover{
-    background-color: #e93f2e;
+    background-color: #e93f2e !important;
 }
 .rrssb-buttons li.rrssb-reddit a:hover{
-    background-color: #8bbbe3;
+    background-color: #8bbbe3 !important;
 }
 .rrssb-buttons li.rrssb-pinterest a:hover{
-    background-color: #b81621;
+    background-color: #b81621 !important;
 }
-.rrssb-buttons li a{
-    background-color: #8c8c8c;
+.rrssb-buttons li a {
     border-radius: 4px;
     box-sizing:border-box;
     display:block;
