@@ -17,14 +17,14 @@
 
   <div class="edge">
     {% if config.plugins.taxonomylist.enabled %}
-    <div>
+    <div class="tag-group">
     <h3>Tags</h3>
     {% include 'partials/taxonomylist.html.twig' with {'base_url': base_url, 'taxonomy':'tag'} %}
     </div>
    {% endif %}
 
 {% if config.plugins.feed.enabled %}
-<div>
+<div class="syndicate">
     <h3>Syndicate</h3>
     <a class="button" href="{{ blog.url }}.atom"><i class="fa fa-rss"></i> Atom 1.0</a>
     <a class="button" href="{{ blog.url }}.rss"><i class="fa fa-rss"></i> RSS</a>
@@ -32,10 +32,10 @@
 {% endif %}
 
 {% if config.plugins.simplesearch.enabled %}
-<div>
+<div class="search-box">
     <h3>Keyword Search</h3>
     {% include 'partials/simplesearch_searchbox.html.twig' %}
-</div>    
+</div>
 </div>
 </div>
 {% endif %}

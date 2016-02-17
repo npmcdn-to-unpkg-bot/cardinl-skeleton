@@ -1,8 +1,8 @@
 ---
-title: A Guide to Lorem Ipsum
-date: 13:34 1/17/2016
-slug: condensed-step-by-step-guide-to-lorem-ipsum
-thumbnail_image_file: unsplash_sergio_rola_thumb.jpg
+title: Lorem Ipsum in 5 Weeks
+date: 13:34 02/07/2016
+slug: lorem-ipsum-g
+thumbnail_image_file: unsplash_henning_witzel_thumb.jpg
 menu: Lorem
 taxonomy:
     category: blog

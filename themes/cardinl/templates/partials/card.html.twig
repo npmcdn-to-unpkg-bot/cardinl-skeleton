@@ -14,12 +14,14 @@
         </h3>
     {% endif %}
     {% if thumbnail_image %}
+        <div class"blog-header-image">
         {% if thumbnail_image_file %}
             {% set thumbnail_image_media = page.media.images[thumbnail_image_file] %}
         {% else %}
             {% set thumbnail_image_media = page.media.images|first %}
         {% endif %}
         {{ thumbnail_image_media.cropZoom(thumbnail_image_width, thumbnail_image_height).html }}
+    </div>
     {% endif %}
     <span class="list-blog-date">
         <em>{{ page.date|date("d M Y") }}</em>
