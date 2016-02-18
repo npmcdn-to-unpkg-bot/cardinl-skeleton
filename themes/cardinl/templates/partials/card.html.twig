@@ -5,14 +5,17 @@
 
 <div class="list-blog-header">
     {% if page.header.link %}
-        <h3>
+        <h3 class="blog-item-title">
             <a href="{{ page.header.link }}">{{ page.title }}</a>
         </h3>
     {% else %}
-        <h3>
+        <h3 class="blog-item-title">
             <a href="{{ page.url }}">{{ page.title }}</a>
         </h3>
     {% endif %}
+    <span class="list-blog-date">
+        <em>{{ page.date|date("d M Y") }}</em>
+    </span>
     {% if thumbnail_image %}
         <div class"blog-header-image">
         {% if thumbnail_image_file %}
@@ -23,9 +26,7 @@
         {{ thumbnail_image_media.cropZoom(thumbnail_image_width, thumbnail_image_height).html }}
     </div>
     {% endif %}
-    <span class="list-blog-date">
-        <em>{{ page.date|date("d M Y") }}</em>
-    </span>
+    
 </div>
 
 <div class="list-blog-padding text">

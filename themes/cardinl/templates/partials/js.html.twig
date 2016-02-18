@@ -12,7 +12,7 @@
                         itemSelector: '.item',
                         columnWidth: 1, /*columns are sized with Pure grids*/
                         percentPosition: true,
-                        transitionDuration: 0
+                        transitionDuration: 0,
                     });
                 } else {
                     Mason.msnry = new Masonry(Mason.grid, {
@@ -33,7 +33,7 @@
         $place: $('#place-holder'),
         setOffset: function () {/*updates offset for navbar:
                                      fix for menu 'jumping' when header shrinks or grows on resize &
-                                     permits menu to 'stick-on-scroll' from varying or changing starting points
+                                     permits menu to 'stick-on-scroll' from different starting points
                                      (i.e., this function allows the header above the menu to be resized easily)*/
               if (ScrollMenu.$navbar.offset().top >=  ScrollMenu.$place.offset().top){
                 ScrollMenu.$nav_top = $('#navbar').offset().top;
@@ -49,18 +49,6 @@
                 $('#place-holder').addClass('remove');
             }
         },
-        throttle: function (funct, limit) {
-                    var wait = false;
-                    return function() {
-                        if(!wait) {
-                            wait = true;
-                            funct.apply(this, arguments);
-                            setTimeout(function() {
-                                wait = false;
-                            }, limit);
-                        }
-                    };
-        }
     };
 
     $(window).on("load", function (e) {

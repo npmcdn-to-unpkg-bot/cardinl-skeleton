@@ -816,13 +816,13 @@ navigation bar styles
 /*size fix so Masonry tiles don't 'stick'*/
 @media (min-width: 35.5em) {
   .card {
-    max-width: 49.9%; } }
+    max-width: 49.8%; } }
 @media (min-width: 48em) {
   .card {
-    max-width: 33.28%; } }
+    max-width: 33.2%; } }
 @media (min-width: 84em) {
   .card {
-    max-width: 24.98%; } }
+    max-width: 24.9%; } }
 /*masonry item*/
 .item {
   float: left;
@@ -838,6 +838,16 @@ navigation bar styles
   margin: 0;
   padding-bottom: .5rem; }
 
+.blog-item-title {
+  display: inline;
+  float: left; }
+
+.list-blog-date {
+  float: right; }
+
+.list-blog-top {
+  height: 2.5rem; }
+
 .tag-group {
   line-height: 2rem;
   padding: 0rem 0rem .6rem 0rem; }
@@ -851,5 +861,8 @@ navigation bar styles
     padding: 0rem .5rem 0rem .5rem;
     border-radius: 2px;
     color: red; }
+
+.tags {
+  padding-bottom: .5rem; }
 
 /*# sourceMappingURL=main.css.map */

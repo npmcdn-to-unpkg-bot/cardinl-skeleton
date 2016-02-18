@@ -4,29 +4,21 @@
     {% set header_image_height = page.header.header_image_height|defined(500) %}
     {% set header_image_file = page.header.header_image_file %}
     <div class="list-blog-header">
+         <div class="list-blog-top">
         {% if page.header.link %}
-            <h2>
+            <h2 class="blog-item-title">
                 {% if page.header.continue_link is not sameas(false) %}
                 <a href="{{ page.url }}"><i class="{{ page.header.icon }}"></i></a>
                 {% endif %}
                 <a href="{{ page.header.link }}">{{ page.title }}</a>
             </h2>
         {% else %}
-            <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+            <h2 class="blog-item-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
         {% endif %}
         <span class="list-blog-date">
             <em>{{ page.date|date("d M Y") }}</em>
         </span>
-        {% if page.taxonomy.tag %}
-        <div class="tag-group">
-            <span class="tags">
-            {% for tag in page.taxonomy.tag %}
-            <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-           </span>
-        </div>
-        {% endif %}
-
+    </div>
         {% if header_image %}
          <div class="blog-header-image">
             {% if header_image_file %}
@@ -36,6 +28,14 @@
             {% endif %}
             {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
           </div>
+        {% endif %}
+        {% if page.taxonomy.tag %}
+        <div class="tag-group">
+            <span>Tags:</span>
+            {% for tag in page.taxonomy.tag %}
+            <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
         {% endif %}
     </div>
     <div class="list-blog-padding">
