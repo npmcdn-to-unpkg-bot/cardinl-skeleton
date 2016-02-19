@@ -495,7 +495,7 @@ ul, li {
   padding: 0; }
 
 a:link {
-  text-decoration: none;
+  text-decoration: underline;
   color: #000; }
 
 a:visited {
@@ -699,6 +699,9 @@ header styles
 
 .syndicate {
   line-height: 2rem; }
+  .syndicate a:link {
+    text-decoration: none;
+    color: #000; }
   .syndicate a {
     border: 1px solid #050A0C;
     padding: 0rem .5rem 0rem .5rem;
@@ -837,6 +840,9 @@ navigation bar styles
   font-family: "Catamaran", sans-serif;
   margin: 0;
   padding-bottom: .5rem; }
+.list-blog-header a:link {
+  text-decoration: none;
+  color: #000; }
 
 .blog-item-title {
   display: inline;
@@ -851,6 +857,9 @@ navigation bar styles
 .tag-group {
   line-height: 2rem;
   padding: 0rem 0rem .6rem 0rem; }
+  .tag-group a:link {
+    text-decoration: none;
+    color: #000; }
   .tag-group a {
     border: 1px solid #050A0C;
     padding: 0rem .5rem 0rem .5rem;

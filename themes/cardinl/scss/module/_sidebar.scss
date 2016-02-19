@@ -3,6 +3,10 @@
 }
 .syndicate{
 	line-height: 2rem;
+	a:link {
+	    text-decoration: none;
+	    color: #000;
+    }
 	a{
 		border: 1px solid $core-text-color;
 		padding: 0rem .5rem 0rem .5rem;
