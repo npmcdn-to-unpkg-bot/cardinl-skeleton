@@ -4,6 +4,9 @@
 {% set thumbnail_image_file = page.header.thumbnail_image_file %}
 
 <div class="list-blog-header">
+    <span class="list-blog-date">
+        <em>{{ page.date|date("d M Y") }}</em>
+    </span>
     {% if page.header.link %}
         <h3 class="blog-item-title">
             <a href="{{ page.header.link }}">{{ page.title }}</a>
@@ -13,9 +16,6 @@
             <a href="{{ page.url }}">{{ page.title }}</a>
         </h3>
     {% endif %}
-    <span class="list-blog-date">
-        <em>{{ page.date|date("d M Y") }}</em>
-    </span>
     {% if thumbnail_image %}
         <div class"blog-header-image">
         {% if thumbnail_image_file %}

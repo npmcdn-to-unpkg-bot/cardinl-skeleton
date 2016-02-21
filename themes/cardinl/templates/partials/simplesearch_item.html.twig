@@ -1,17 +1,18 @@
 <section class="search-row pure-u-1 pure-u-md-1-2 pure-u-xl-1-4 card item">
     {% set banner = page.media.images|first %}
     <div class="edge">
+        <div class="list-blog-header">
         <div>
-            <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+            <span class="list-blog-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+        </div>
+        <div>
+            <h3 class="blog-item-title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
         </div>
         {% if banner %}
         <div>
             <a href="{{ page.url }}">{{ banner.cropZoom(400, 225).html }}</a>
         </div>
         {% endif %}
-          <div>
-            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-        </div>
         <p>{{ page.summary }}</p>
     </div>
 </section>

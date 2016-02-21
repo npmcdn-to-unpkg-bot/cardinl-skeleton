@@ -22,3 +22,9 @@
 	}
 
 }
+.sidebar{
+    h3{
+    	border-bottom:2px solid $core-accent;
+    	font-family: $sub-heading-font-stack;
+    }
+}

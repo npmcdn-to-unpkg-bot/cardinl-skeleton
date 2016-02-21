@@ -5,6 +5,9 @@
     {% set header_image_file = page.header.header_image_file %}
     <div class="list-blog-header">
          <div class="list-blog-top">
+            <span class="list-blog-date">
+                <em>{{ page.date|date("d M Y") }}</em>
+            </span>
         {% if page.header.link %}
             <h2 class="blog-item-title">
                 {% if page.header.continue_link is not sameas(false) %}
@@ -15,9 +18,6 @@
         {% else %}
             <h2 class="blog-item-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
         {% endif %}
-        <span class="list-blog-date">
-            <em>{{ page.date|date("d M Y") }}</em>
-        </span>
     </div>
         {% if header_image %}
          <div class="blog-header-image">
@@ -31,7 +31,7 @@
         {% endif %}
         {% if page.taxonomy.tag %}
         <div class="tag-group">
-            <span>Tags:</span>
+             <span class="tag-title">Tags:</span>
             {% for tag in page.taxonomy.tag %}
             <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
             {% endfor %}

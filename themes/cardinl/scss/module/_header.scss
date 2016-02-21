@@ -41,7 +41,6 @@ header styles
 	display:block;
 	font-size: $base-font-size;
 	font-family:$heading-font-stack;
-	padding-left: .5rem;
 	color:$core-text-color;
 }
 /*content-based breakpoints for responsive sub-title text*/
@@ -58,6 +57,7 @@ header styles
 @media (min-width: 70em){
 	.subtitle{
 		font-size: $base-font-size + .35;
+		padding-left: .25rem;
     }
 }
 @media (min-width: 84em){

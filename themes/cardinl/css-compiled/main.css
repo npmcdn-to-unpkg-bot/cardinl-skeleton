@@ -385,22 +385,22 @@ th {
   padding: 0 2px; }
 
 .rrssb-buttons li.rrssb-facebook a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-tumblr a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-twitter a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-googleplus a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-reddit a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-pinterest a:link {
-  background-color: #EF3300 !important; }
+  background-color: #7C7C7C !important; }
 
 .rrssb-buttons li.rrssb-facebook a:hover {
   background-color: #306199 !important; }
@@ -488,7 +488,7 @@ img {
   height: auto;
   width: auto\9;
   /*responsive image on resize hack*/
-  border-radius: 3px; }
+  border-radius: 2px; }
 
 ul, li {
   list-style: none;
@@ -527,24 +527,24 @@ a:active {
 adjusting padding, border, and margin of tiles without
 having to adjust column or card sizing*/
 .edge {
-  margin: .3rem;
-  padding: .4rem;
+  margin: 0.3rem;
+  padding: 0.6rem;
   background: #FFFEFF;
   box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
   border-radius: 2px; }
 
 @media (min-width: 35.5em) {
   .edge {
-    margin: .4rem;
-    padding: .5rem; } }
+    margin: 0.4rem;
+    padding: .7rem; } }
 @media (min-width: 58em) {
   .edge {
-    margin: .5rem;
-    padding: .6rem; } }
+    margin: 0.5rem;
+    padding: .8rem; } }
 @media (min-width: 70em) {
   .edge {
-    margin: .6rem;
-    padding: .7rem; } }
+    margin: 0.6rem;
+    padding: .9rem; } }
 /*container layout for masonry*/
 .container {
   float: right;
@@ -613,7 +613,6 @@ header styles
   display: block;
   font-size: 1rem;
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
-  padding-left: .5rem;
   color: #292C2D; }
 
 /*content-based breakpoints for responsive sub-title text*/
@@ -625,7 +624,8 @@ header styles
     font-size: 1.15rem; } }
 @media (min-width: 70em) {
   .subtitle {
-    font-size: 1.35rem; } }
+    font-size: 1.35rem;
+    padding-left: .25rem; } }
 @media (min-width: 84em) {
   .subtitle {
     font-size: 1.65rem; } }
@@ -661,26 +661,26 @@ header styles
   padding: 0rem 0rem 0rem .4rem;
   margin-left: .05rem;
   float: left;
-  height: 7.2rem;
+  height: 8.45rem;
   background-color: inherit;
   border-bottom: 6px solid #EF3300; }
 
 @media (min-width: 48em) {
   #header {
     padding: 0rem 0rem 0rem .6rem;
-    height: 8.2rem; } }
+    height: 9.45rem; } }
 @media (min-width: 60em) {
   #header {
     padding: 0rem 0rem 0rem .8rem;
-    height: 9.5rem; } }
+    height: 10.75rem; } }
 @media (min-width: 72em) {
   #header {
     padding: 0rem 0rem 0rem 1rem;
-    height: 10.5rem; } }
+    height: 11.75rem; } }
 @media (min-width: 86em) {
   #header {
     padding: 0rem 0rem 0rem 1.2rem;
-    height: 11.8rem; } }
+    height: 13.05rem; } }
 /*conserve screen space for mobile sizes*/
 #topline {
   margin-top: 0;
@@ -695,6 +695,8 @@ header styles
     list-style: none;
     text-align: center;
     padding-left: 1.5rem; }
+  .bottom-footer h4 {
+    font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif; }
 
 @media (min-width: 84em) {
   .bottom-footer {
@@ -718,6 +720,10 @@ header styles
     border-radius: 2px;
     color: #FFFEFF;
     background-color: #EF3300; }
+
+.sidebar h3 {
+  border-bottom: 2px solid #EF3300;
+  font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif; }
 
 /*-----------------------------------------------------------------------------
 navigation bar styles
@@ -822,7 +828,7 @@ navigation bar styles
   animation-delay: .3s; }
 
 .card h4 {
-  font-family: "Catamaran", sans-serif; }
+  font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif; }
 
 /*size fix so Masonry tiles don't 'stick'*/
 @media (min-width: 35.5em) {
@@ -845,7 +851,7 @@ navigation bar styles
   background-attachment: fixed; }
 
 .list-blog-header h2, .list-blog-header h3 {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
   margin: 0;
   padding-bottom: .5rem; }
 .list-blog-header a:link {
@@ -860,6 +866,9 @@ navigation bar styles
 .list-blog-header a:active {
   text-decoration: none;
   color: #292C2D; }
+.list-blog-header .tag-group {
+  text-align: right;
+  border-bottom: 1px solid #7C7C7C; }
 
 .blog-item-title {
   display: inline;
@@ -867,7 +876,7 @@ navigation bar styles
 
 .list-blog-date {
   float: right;
-  border-bottom: 1px solid #EF3300; }
+  border-bottom: 1px solid #7C7C7C; }
 
 .list-blog-top {
   height: 2.5rem; }
@@ -892,5 +901,10 @@ navigation bar styles
 
 .tags {
   padding-bottom: .5rem; }
+
+.tag-title {
+  padding-right: 1rem;
+  font-size: 1.05rem;
+  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

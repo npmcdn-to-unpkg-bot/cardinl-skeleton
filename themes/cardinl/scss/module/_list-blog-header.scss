@@ -20,6 +20,10 @@
       text-decoration: none;
         color: $core-text-color;
     }
+    .tag-group{
+        text-align:right;
+        border-bottom: 1px solid $alt-accent;
+    }
 }
 
 .blog-header-image{
@@ -33,7 +37,7 @@
  }
  .list-blog-date{
  	float:right;
-    border-bottom: 1px solid $core-accent;
+    border-bottom: 1px solid $alt-accent;
  }
 
  .list-blog-top{
