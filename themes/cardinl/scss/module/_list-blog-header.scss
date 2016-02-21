@@ -4,9 +4,21 @@
 		margin:0;
 		padding-bottom:.5rem;
 	}
-	a:link {
-	    text-decoration: none;
-	    color: #000;
+	 a:link {
+    text-decoration: none;
+    color: $core-text-color;
+    }
+    a:visited {
+        text-decoration: none;
+        color: $core-text-color;
+    }
+    a:hover   {
+      text-decoration: none;
+        color: $core-accent;
+    }
+    a:active  {
+      text-decoration: none;
+        color: $core-text-color;
     }
 }
 

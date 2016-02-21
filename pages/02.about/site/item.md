@@ -6,7 +6,7 @@ taxonomy:
     category: about
 
 ---
-This site is bullt on top of a [Grav Skeleton](https://getgrav.org/downloads/skeletons), and will work in any Grav install - just swap out the user folder. The Cardinl theme will also work directly with the [Grav Blog Skeleton](https://github.com/getgrav/grav-skeleton-blog-site). This About page is also structured as a Grav listing-style page, but it certainly doesn't need to be (and will probably soon get replaced with a [modular page](http://learn.getgrav.org/content/modular).
+This site is bullt on top of a [Grav Skeleton](https://getgrav.org/downloads/skeletons), and will work in any Grav install - just swap out the user folder. The Cardinl theme will also work directly with the [Grav Blog Skeleton](https://github.com/getgrav/grav-skeleton-blog-site). This About page is also structured as a Grav listing-style page, but it certainly doesn't need to be (and will probably soon be replaced with a [modular page](http://learn.getgrav.org/content/modular)).
 
 ---
 

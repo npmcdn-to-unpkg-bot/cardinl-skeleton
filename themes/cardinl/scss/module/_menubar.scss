@@ -26,6 +26,7 @@ navigation bar styles
     li{
 		   display:inline;
 		   list-style:none;
+       text-align: center;
 		   padding-left:.5rem;
        font-family: $sub-heading-font-stack;
        font-style: normal;
@@ -84,6 +85,7 @@ navigation bar styles
 	   li{
 	   	  padding-top:1rem;
         padding-bottom:3rem;
+         padding-left:0;
 		    display:block;
 		    margin:2rem;
         font-size:$h4-font-size;
