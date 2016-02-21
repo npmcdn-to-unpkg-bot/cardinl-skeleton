@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
     {% block stylesheets %}
-        {% do assets.addCss('https://fonts.googleapis.com/css?family=Merriweather:900italic|Catamaran|Amaranth', 104) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Catamaran|Roboto+Slab', 104) %}
         {% do assets.addCss('theme://css/grids-custom-min.css', 104) %}
         {% do assets.addCss('theme://css-compiled/main.css',105) %}
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}

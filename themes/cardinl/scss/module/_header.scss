@@ -8,7 +8,6 @@ header styles
 	padding: 0;
 	font-size: $h3-font-size;
 	font-family:$heading-font-stack;
-	font-style: italic;
 	color:$core-text-color;
 }
 /*content-based breakpoints for responsive title text*/
@@ -41,8 +40,8 @@ header styles
 .subtitle{
 	display:block;
 	font-size: $base-font-size;
-	font-weight: 400;
-	font-style: italic;
+	font-family:$heading-font-stack;
+	padding-left: .5rem;
 	color:$core-text-color;
 }
 /*content-based breakpoints for responsive sub-title text*/
@@ -63,7 +62,7 @@ header styles
 }
 @media (min-width: 84em){
 	.subtitle{
-		font-size: $base-font-size + .75rem;
+		font-size: $base-font-size + .65rem;
     }
 }
 /*fast fade-in-first animation for top line of header text*/
@@ -84,9 +83,11 @@ header styles
 /*content-based breakpoints for responsive header height*/
 #header{
 	padding: 0rem 0rem 0rem .4rem;
+	margin-left:.05rem;
 	float:left;
 	height:$header-height - 3.8;
 	background-color: inherit;
+	border-bottom:6px solid $core-accent;
 }
 
 @media (min-width: 48em){
