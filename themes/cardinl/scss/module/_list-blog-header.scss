@@ -3,23 +3,23 @@
 		font-family: $sub-heading-font-stack;
 		margin:0;
 		padding-bottom:.5em;
+        a:link {
+           text-decoration: none;
+           color: $core-text-color;
+        }
+        a:visited {
+            text-decoration: none;
+            color: $core-text-color;
+        }
+        a:hover   {
+            text-decoration: none;
+            color: $core-accent;
+        }
+        a:active  {
+            text-decoration: none;
+            color: $core-text-color;
+        }
 	}
-	 a:link {
-    text-decoration: none;
-    color: $core-text-color;
-    }
-    a:visited {
-        text-decoration: none;
-        color: $core-text-color;
-    }
-    a:hover   {
-      text-decoration: none;
-        color: $core-accent;
-    }
-    a:active  {
-      text-decoration: none;
-        color: $core-text-color;
-    }
     .tag-group{
         text-align:right;
         border-bottom: 1px solid $alt-accent;

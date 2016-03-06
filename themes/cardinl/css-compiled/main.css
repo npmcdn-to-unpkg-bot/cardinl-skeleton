@@ -881,18 +881,18 @@ navigation bar styles
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
   margin: 0;
   padding-bottom: .5em; }
-.list-blog-header a:link {
-  text-decoration: none;
-  color: #292C2D; }
-.list-blog-header a:visited {
-  text-decoration: none;
-  color: #292C2D; }
-.list-blog-header a:hover {
-  text-decoration: none;
-  color: #EF3300; }
-.list-blog-header a:active {
-  text-decoration: none;
-  color: #292C2D; }
+  .list-blog-header h2 a:link, .list-blog-header h3 a:link {
+    text-decoration: none;
+    color: #292C2D; }
+  .list-blog-header h2 a:visited, .list-blog-header h3 a:visited {
+    text-decoration: none;
+    color: #292C2D; }
+  .list-blog-header h2 a:hover, .list-blog-header h3 a:hover {
+    text-decoration: none;
+    color: #EF3300; }
+  .list-blog-header h2 a:active, .list-blog-header h3 a:active {
+    text-decoration: none;
+    color: #292C2D; }
 .list-blog-header .tag-group {
   text-align: right;
   border-bottom: 1px solid #7C7C7C; }
