@@ -1,5 +1,5 @@
 ---
-title: About Cardninl
+title: About Cardinl
 date: 12:34 02/18/2016
 menu: About Cardinl
 taxonomy:
