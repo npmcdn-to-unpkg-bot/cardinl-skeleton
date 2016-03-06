@@ -2,22 +2,22 @@
 ;(function ($, window, document, undefined) {
     "use strict";
 
-    var Mason = {
+    var Mason = {    /*masonry.js implementation, automatically fills gaps between rows of tiles*/
         grid: document.querySelector('#masonry'),
         msnry: undefined,
         init: function(){
-            imagesLoaded(Mason.grid, function () {
+            imagesLoaded(Mason.grid, function () {    /*wait for images to load before rearranging tiles*/
                 if (Modernizr.csstransitions) {
                     Mason.msnry = new Masonry(Mason.grid, {
                         itemSelector: '.item',
-                        columnWidth: 1, /*columns are sized with Pure grids*/
+                        columnWidth: 1, /*columns are sized with custom responsive Pure grids*/
                         percentPosition: true,
                         transitionDuration: 0,
                     });
                 } else {
                     Mason.msnry = new Masonry(Mason.grid, {
                         itemSelector: '.item',
-                        columnWidth: 1,
+                        columnWidth: 1, /*columns are sized with custom responsive Pure grids*/
                         percentPosition: true,
                         transitionDuration: '.2s'
                     });
@@ -31,17 +31,15 @@
         $navbar: $('#navbar'),
         $nav_top: $('#navbar').offset().top,
         $place: $('#place-holder'),
-        setOffset: function () {/*updates offset for navbar:
-                                     fix for menu 'jumping' when header shrinks or grows on resize &
-                                     permits menu to 'stick-on-scroll' from different starting points
-                                     (i.e., this function allows the header above the menu to be resized easily)*/
-              if (ScrollMenu.$navbar.offset().top >=  ScrollMenu.$place.offset().top){
+        setOffset: function () {    /*updates offset for navbar: fix for navbar 'jumping' when header shrinks or grows on resize &
+                                     permits navbar to 'stick-on-scroll' from different starting points (i.e., this function allows the header above the navbar to be resized easily)*/
+              if (ScrollMenu.$navbar.offset().top >=  ScrollMenu.$place.offset().top){     /*if the navbar is lower than the placeholder*/
                 ScrollMenu.$nav_top = $('#navbar').offset().top;
               }
         },
-        navbarStick: function () {
+        navbarStick: function () {    /*adds 'stick-on-scroll' class to navbar*/
             ScrollMenu.setOffset();
-            if (ScrollMenu.$window.scrollTop() >= ScrollMenu.$nav_top) {
+            if (ScrollMenu.$window.scrollTop() >= ScrollMenu.$nav_top) {    /*if the top of the window reaches the top of the navbar*/
                 $('#navbar').addClass('scroll-stick');
                 $('#place-holder').removeClass('remove');
             } else {

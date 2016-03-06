@@ -2,11 +2,11 @@
 .container{
     float:right;
     background-color: inherit;
-    padding-top:.25rem;
+    padding-top:.25em;
  }
 @media (min-width: 84em){
 	.container{
-    	padding-top:2rem;
+    	padding-top:2em;
  	}
 }
  /*page-loading animation, gives masonry time to adjust */

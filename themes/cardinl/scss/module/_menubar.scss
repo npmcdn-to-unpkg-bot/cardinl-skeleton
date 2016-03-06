@@ -3,7 +3,7 @@ navigation bar styles
 -----------------------------------------------------------------------------*/
 /*placeholder to prevent 'jump' when switching menu to fixed position */
 #place-holder{
-       height:4rem;
+       height:4em;
        float:left;
     }
 
@@ -22,12 +22,12 @@ navigation bar styles
     z-index:5;
     float:left;
     background:inherit;
-    height:3.8rem;
+    height:3.8em;
     li{
 		   display:inline;
 		   list-style:none;
        text-align: center;
-		   padding-left:.5rem;
+		   padding-left:.5em;
        font-family: $heading-font-stack;
        font-style: normal;
 		   font-size:$h6-font-size * .9;
@@ -56,7 +56,7 @@ navigation bar styles
 @media (min-width: 48em){
   .menubar{
         li{
-           padding-left:.7rem;
+           padding-left:.7em;
            font-size:$h6-font-size * 1;
         }
     }
@@ -64,7 +64,7 @@ navigation bar styles
 @media (min-width: 60em){
   .menubar{
        li{
-           padding-left:.9rem;
+           padding-left:.9em;
            //font-size:$h6-font-size * 1.3;
         }
     }
@@ -72,7 +72,7 @@ navigation bar styles
 @media (min-width: 72em){
   .menubar{
        li{
-           padding-left:1rem;
+           padding-left:1em;
         }
     }
 }
@@ -83,11 +83,11 @@ navigation bar styles
 	.menubar{
     height:inherit;
 	   li{
-	   	  padding-top:1rem;
-        padding-bottom:3rem;
+	   	  padding-top:1em;
+        padding-bottom:3em;
          padding-left:0;
 		    display:block;
-		    margin:2rem;
+		    margin:2em;
         font-size:$h4-font-size;
 	   }
 

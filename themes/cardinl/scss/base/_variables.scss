@@ -1,5 +1,18 @@
-/**/
-$footer-height: 14rem;
-$header-height: 12.25rem;
-$base-card-padding: .6rem;
-$base-card-margin:  .3rem;
+/*layout*/
+$footer-height: 14em;
+$header-height: 14em;
+$base-card-padding: .6em;
+$base-card-margin:  .3em;
+
+/*typography*/
+$base-font-size:				1em !default;
+$base-line-height:				1.6 !default;
+
+$h1-font-size:					$base-font-size * 3.583 !default;
+$h2-font-size:					$base-font-size * 2.488 !default;
+$h3-font-size:					$base-font-size * 1.728 !default;
+$h4-font-size:					$base-font-size * 1.44 !default;
+$h5-font-size:					$base-font-size * 1.2 !default;
+$h6-font-size:					$base-font-size !default;
+
+$leading-margin:				$base-line-height * 1em !default;

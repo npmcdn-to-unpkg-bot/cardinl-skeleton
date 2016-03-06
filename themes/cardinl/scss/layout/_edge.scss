@@ -13,20 +13,20 @@ having to adjust column or card sizing*/
 
 @media (min-width: 35.5em){
 	.edge{
-	    margin: $base-card-margin + .1rem;
-	    padding: .7rem;
+	    margin: $base-card-margin + .1em;
+	    padding: .7em;
     }
 }
 @media (min-width: 58em){
 	.edge{
-	    margin: $base-card-margin +.2rem;
-	    padding: .8rem;
+	    margin: $base-card-margin +.2em;
+	    padding: .8em;
     }
 }
 @media (min-width: 70em){
     .edge{
-	    margin: $base-card-margin +.3rem;
-	    padding: .9rem;
+	    margin: $base-card-margin +.3em;
+	    padding: .9em;
     }
 }
 @media (min-width: 84em){

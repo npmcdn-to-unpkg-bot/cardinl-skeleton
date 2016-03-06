@@ -1,21 +1,21 @@
 .search-box{
-	padding-bottom: 2rem;
+	padding-bottom: 2em;
 }
 .syndicate{
-	line-height: 2rem;
+	line-height: 2em;
 	a:link {
 	    text-decoration: none;
 	    color: #000;
     }
 	a{
 		border: 1px solid $core-text-color;
-		padding: 0rem .5rem 0rem .5rem;
+		padding: 0em .5em 0em .5em;
         border-radius: 2px;
         color: $core-text-color;
 	}
 	a:hover{
 		border: 1px solid $core-accent;
-		padding: 0rem .5rem 0rem .5rem;
+		padding: 0em .5em 0em .5em;
         border-radius: 2px;
         color: $alt-background;
         background-color:$core-accent;

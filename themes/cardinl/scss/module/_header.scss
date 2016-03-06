@@ -33,38 +33,39 @@ header styles
 }
 @media (min-width: 86em){
 	.title{
-		font-size: $h1-font-size;
+		/*responsive header text styles go here*/
     }
 }
 /*header second line*/
 .subtitle{
 	display:block;
-	font-size: $base-font-size;
+	font-size: 45%;
+	padding-left: .25em;
 	font-family:$heading-font-stack;
 	color:$core-text-color;
 }
 /*content-based breakpoints for responsive sub-title text*/
 @media (min-width: 25em){
 	.subtitle{
-		font-size: $base-font-size + .09;
+       font-size: 50%;
     }
 }
 @media (min-width: 52em){
 	.subtitle{
-     font-size: $base-font-size + .15;
+		/*responsive header text styles go here*/
     }
 }
 @media (min-width: 70em){
 	.subtitle{
-		font-size: $base-font-size + .35;
-		padding-left: .25rem;
+		/*responsive header text styles go here*/
     }
 }
 @media (min-width: 84em){
 	.subtitle{
-		font-size: $base-font-size + .65rem;
+		/*responsive header text styles go here*/
     }
 }
+
 /*fast fade-in-first animation for top line of header text*/
 @-moz-keyframes headerLoad { from { opacity:0; } to { opacity:1; } }
 @-webkit-keyframes headerLoad { from { opacity:0; } to { opacity:1; } }
@@ -82,8 +83,8 @@ header styles
 }
 /*content-based breakpoints for responsive header height*/
 #header{
-	padding: 0rem 0rem 0rem .4rem;
-	margin-left:.05rem;
+	padding: 0em 0em 0em .4em;
+	margin-left:.05em;
 	float:left;
 	height:$header-height - 3.8;
 	background-color: inherit;
@@ -92,25 +93,25 @@ header styles
 
 @media (min-width: 48em){
 	#header{
-		padding: 0rem 0rem 0rem .6rem;
+		padding: 0em 0em 0em .6em;
 		height:$header-height - 2.8;
     }
 }
 @media (min-width: 60em){
 	#header{
-		padding: 0rem 0rem 0rem .8rem;
+		padding: 0em 0em 0em .8em;
 		height:$header-height - 1.5;
     }
 }
 @media (min-width: 72em){
 	#header{
-		padding: 0rem 0rem 0rem 1rem;
+		padding: 0em 0em 0em 1em;
 	    height:$header-height - .5;
     }
 }
 @media (min-width: 86em){
 	#header{
-		padding: 0rem 0rem 0rem 1.2rem;
+		padding: 0em 0em 0em 1.2em;
 	    height:$header-height +.8;
     }
 }

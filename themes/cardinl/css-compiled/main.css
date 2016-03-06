@@ -353,14 +353,15 @@ td,
 th {
   padding: 0; }
 
-/**/
+/*layout*/
+/*typography*/
 /**/
 .rrssb-text {
   visibility: hidden; }
 
 .rrssb-buttons {
   box-sizing: border-box;
-  height: 3rem;
+  height: 3em;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -435,15 +436,15 @@ th {
 
 .rrssb-buttons li a .rrssb-icon {
   display: block;
-  left: 0.75rem;
-  padding-top: 0.62rem;
+  left: 0.75em;
+  padding-top: 0.62em;
   position: absolute;
   top: 0;
   width: 0; }
 
 .rrssb-buttons li a .rrssb-icon svg {
-  height: 1.16rem;
-  width: 1.16rem; }
+  height: 1.16em;
+  width: 1.16em; }
 
 .rrssb-buttons li a .rrssb-icon svg path {
   fill: #FFFFFF; }
@@ -474,14 +475,14 @@ body {
   font-family: "Catamaran", sans-serif;
   height: 100%;
   bottom: 0;
-  margin: 0 0 14rem;
+  margin: 0 0 14em;
   /*sticky footer styling*/ }
 
 footer {
-  height: 14rem;
+  height: 14em;
   width: 100%; }
   footer p {
-    padding-bottom: 2rem; }
+    padding-bottom: 2em; }
 
 img {
   max-width: 100%;
@@ -527,33 +528,33 @@ a:active {
 adjusting padding, border, and margin of tiles without
 having to adjust column or card sizing*/
 .edge {
-  margin: 0.3rem;
-  padding: 0.6rem;
+  margin: 0.3em;
+  padding: 0.6em;
   background: #FFFEFF;
   box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
   border-radius: 2px; }
 
 @media (min-width: 35.5em) {
   .edge {
-    margin: 0.4rem;
-    padding: .7rem; } }
+    margin: 0.4em;
+    padding: .7em; } }
 @media (min-width: 58em) {
   .edge {
-    margin: 0.5rem;
-    padding: .8rem; } }
+    margin: 0.5em;
+    padding: .8em; } }
 @media (min-width: 70em) {
   .edge {
-    margin: 0.6rem;
-    padding: .9rem; } }
+    margin: 0.6em;
+    padding: .9em; } }
 /*container layout for masonry*/
 .container {
   float: right;
   background-color: inherit;
-  padding-top: .25rem; }
+  padding-top: .25em; }
 
 @media (min-width: 84em) {
   .container {
-    padding-top: 2rem; } }
+    padding-top: 2em; } }
 /*page-loading animation, gives masonry time to adjust */
 @-moz-keyframes containerLoad {
   from {
@@ -588,47 +589,47 @@ header styles
 .title {
   display: block;
   padding: 0;
-  font-size: 2.488rem;
+  font-size: 1.728em;
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
   color: #292C2D; }
 
 /*content-based breakpoints for responsive title text*/
 @media (min-width: 35.5em) {
   .title {
-    font-size: 2.988rem; } }
+    font-size: 2.228em; } }
 @media (min-width: 48em) {
   .title {
-    font-size: 3.488rem; } }
+    font-size: 2.728em; } }
 @media (min-width: 62em) {
   .title {
-    font-size: 3.883rem; } }
+    font-size: 2.788em; } }
 @media (min-width: 72em) {
   .title {
-    font-size: 4.8rem; } }
+    font-size: 3.083em; } }
 @media (min-width: 86em) {
   .title {
-    font-size: 5.3rem; } }
+    /*responsive header text styles go here*/ } }
 /*header second line*/
 .subtitle {
   display: block;
-  font-size: 1rem;
+  font-size: 45%;
+  padding-left: .25em;
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
   color: #292C2D; }
 
 /*content-based breakpoints for responsive sub-title text*/
 @media (min-width: 25em) {
   .subtitle {
-    font-size: 1.09rem; } }
+    font-size: 50%; } }
 @media (min-width: 52em) {
   .subtitle {
-    font-size: 1.15rem; } }
+    /*responsive header text styles go here*/ } }
 @media (min-width: 70em) {
   .subtitle {
-    font-size: 1.35rem;
-    padding-left: .25rem; } }
+    /*responsive header text styles go here*/ } }
 @media (min-width: 84em) {
   .subtitle {
-    font-size: 1.65rem; } }
+    /*responsive header text styles go here*/ } }
 /*fast fade-in-first animation for top line of header text*/
 @-moz-keyframes headerLoad {
   from {
@@ -658,65 +659,65 @@ header styles
 
 /*content-based breakpoints for responsive header height*/
 #header {
-  padding: 0rem 0rem 0rem .4rem;
-  margin-left: .05rem;
+  padding: 0em 0em 0em .4em;
+  margin-left: .05em;
   float: left;
-  height: 8.45rem;
+  height: 10.2em;
   background-color: inherit;
   border-bottom: 6px solid #EF3300; }
 
 @media (min-width: 48em) {
   #header {
-    padding: 0rem 0rem 0rem .6rem;
-    height: 9.45rem; } }
+    padding: 0em 0em 0em .6em;
+    height: 11.2em; } }
 @media (min-width: 60em) {
   #header {
-    padding: 0rem 0rem 0rem .8rem;
-    height: 10.75rem; } }
+    padding: 0em 0em 0em .8em;
+    height: 12.5em; } }
 @media (min-width: 72em) {
   #header {
-    padding: 0rem 0rem 0rem 1rem;
-    height: 11.75rem; } }
+    padding: 0em 0em 0em 1em;
+    height: 13.5em; } }
 @media (min-width: 86em) {
   #header {
-    padding: 0rem 0rem 0rem 1.2rem;
-    height: 13.05rem; } }
+    padding: 0em 0em 0em 1.2em;
+    height: 14.8em; } }
 /*conserve screen space for mobile sizes*/
 #topline {
   margin-top: 0;
   margin-bottom: 0; }
 
 .bottom-footer {
-  margin-top: 3rem;
+  margin-top: 3em;
   text-align: right;
-  padding-right: .75rem; }
+  padding-right: .75em; }
   .bottom-footer ul li {
     display: inline;
     list-style: none;
     text-align: center;
-    padding-left: 1.5rem; }
+    padding-left: 1.5em; }
   .bottom-footer h4 {
     font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif; }
 
 @media (min-width: 84em) {
   .bottom-footer {
-    padding-right: 1rem; } }
+    padding-right: 1em; } }
 .search-box {
-  padding-bottom: 2rem; }
+  padding-bottom: 2em; }
 
 .syndicate {
-  line-height: 2rem; }
+  line-height: 2em; }
   .syndicate a:link {
     text-decoration: none;
     color: #000; }
   .syndicate a {
     border: 1px solid #292C2D;
-    padding: 0rem .5rem 0rem .5rem;
+    padding: 0em .5em 0em .5em;
     border-radius: 2px;
     color: #292C2D; }
   .syndicate a:hover {
     border: 1px solid #EF3300;
-    padding: 0rem .5rem 0rem .5rem;
+    padding: 0em .5em 0em .5em;
     border-radius: 2px;
     color: #FFFEFF;
     background-color: #EF3300; }
@@ -730,7 +731,7 @@ navigation bar styles
 -----------------------------------------------------------------------------*/
 /*placeholder to prevent 'jump' when switching menu to fixed position */
 #place-holder {
-  height: 4rem;
+  height: 4em;
   float: left; }
 
 @media (min-width: 84em) {
@@ -746,15 +747,15 @@ navigation bar styles
   z-index: 5;
   float: left;
   background: inherit;
-  height: 3.8rem; }
+  height: 3.8em; }
   .menubar li {
     display: inline;
     list-style: none;
     text-align: center;
-    padding-left: .5rem;
+    padding-left: .5em;
     font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
     font-style: normal;
-    font-size: 1.08rem; }
+    font-size: 0.9em; }
   .menubar ul {
     margin: 2; }
   .menubar a:link {
@@ -772,25 +773,25 @@ navigation bar styles
 
 @media (min-width: 48em) {
   .menubar li {
-    padding-left: .7rem;
-    font-size: 1.2rem; } }
+    padding-left: .7em;
+    font-size: 1em; } }
 @media (min-width: 60em) {
   .menubar li {
-    padding-left: .9rem; } }
+    padding-left: .9em; } }
 @media (min-width: 72em) {
   .menubar li {
-    padding-left: 1rem; } }
+    padding-left: 1em; } }
 /*vertical dispay for large screen sizes*/
 @media (min-width: 84em) {
   .menubar {
     height: inherit; }
     .menubar li {
-      padding-top: 1rem;
-      padding-bottom: 3rem;
+      padding-top: 1em;
+      padding-bottom: 3em;
       padding-left: 0;
       display: block;
-      margin: 2rem;
-      font-size: 1.728rem; } }
+      margin: 2em;
+      font-size: 1.44em; } }
 /*stick-on-scroll for navigation menu*/
 .scroll-stick {
   position: fixed;
@@ -853,7 +854,7 @@ navigation bar styles
 .list-blog-header h2, .list-blog-header h3 {
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
   margin: 0;
-  padding-bottom: .5rem; }
+  padding-bottom: .5em; }
 .list-blog-header a:link {
   text-decoration: none;
   color: #292C2D; }
@@ -879,7 +880,7 @@ navigation bar styles
   border-bottom: 1px solid #7C7C7C; }
 
 .list-blog-top {
-  height: 2.5rem; }
+  height: 2.5em; }
 
 .tag-group {
   line-height: 2em;
@@ -904,7 +905,7 @@ navigation bar styles
 
 .tag-title {
   padding-right: 1em;
-  font-size: 1.05rem;
+  font-size: 1.05em;
   font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
