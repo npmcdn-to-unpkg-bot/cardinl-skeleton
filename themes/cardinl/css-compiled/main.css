@@ -546,6 +546,37 @@ having to adjust column or card sizing*/
   .edge {
     margin: 0.6em;
     padding: .9em; } }
+.list-blog-header h2, .list-blog-header h3 {
+  font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
+  margin: 0;
+  padding-bottom: .5em; }
+  .list-blog-header h2 a:link, .list-blog-header h3 a:link {
+    text-decoration: none;
+    color: #292C2D; }
+  .list-blog-header h2 a:visited, .list-blog-header h3 a:visited {
+    text-decoration: none;
+    color: #292C2D; }
+  .list-blog-header h2 a:hover, .list-blog-header h3 a:hover {
+    text-decoration: none;
+    color: #EF3300; }
+  .list-blog-header h2 a:active, .list-blog-header h3 a:active {
+    text-decoration: none;
+    color: #292C2D; }
+.list-blog-header .tag-group {
+  text-align: right;
+  border-bottom: 1px solid #7C7C7C; }
+
+.blog-item-title {
+  display: inline;
+  float: left; }
+
+.list-blog-date {
+  float: right;
+  border-bottom: 1px solid #7C7C7C; }
+
+.list-blog-top {
+  height: 2.5em; }
+
 .tag-group {
   line-height: 2em;
   padding: 0em 0em .6em 0em; }
@@ -876,36 +907,5 @@ navigation bar styles
 .body {
   background: #FFFEFC;
   background-attachment: fixed; }
-
-.list-blog-header h2, .list-blog-header h3 {
-  font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
-  margin: 0;
-  padding-bottom: .5em; }
-  .list-blog-header h2 a:link, .list-blog-header h3 a:link {
-    text-decoration: none;
-    color: #292C2D; }
-  .list-blog-header h2 a:visited, .list-blog-header h3 a:visited {
-    text-decoration: none;
-    color: #292C2D; }
-  .list-blog-header h2 a:hover, .list-blog-header h3 a:hover {
-    text-decoration: none;
-    color: #EF3300; }
-  .list-blog-header h2 a:active, .list-blog-header h3 a:active {
-    text-decoration: none;
-    color: #292C2D; }
-.list-blog-header .tag-group {
-  text-align: right;
-  border-bottom: 1px solid #7C7C7C; }
-
-.blog-item-title {
-  display: inline;
-  float: left; }
-
-.list-blog-date {
-  float: right;
-  border-bottom: 1px solid #7C7C7C; }
-
-.list-blog-top {
-  height: 2.5em; }
 
 /*# sourceMappingURL=main.css.map */
