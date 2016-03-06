@@ -6,7 +6,7 @@ taxonomy:
     category: about
 
 ---
-Cardinl is a responsive, tiled theme that uses [Masonry.js](http://masonry.desandro.com/) and [Purecss grids](http://purecss.io/). Resizing the width of the cards is as easy as changing the responsive the pure-* classes, and restyling the edges of the card can be done by modifying the SCSS module _edge.scss.
+Cardinl is a responsive, tiled theme that uses [Masonry.js](http://masonry.desandro.com/) and [PureCSS grids](http://purecss.io/).  Customizing this theme is easy.  Simply apply different responsive pure-* classes to resize the widths of the cards, and then restyle the edges by modifying the SCSS module _edge.scss.
 
 ---
 
