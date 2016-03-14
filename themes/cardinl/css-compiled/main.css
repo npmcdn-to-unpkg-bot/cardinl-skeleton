@@ -649,7 +649,11 @@ header styles
   padding: 0;
   font-size: 1.728em;
   font-family: "Roboto Slab", "Georgia", "Utopia", "Charter", serif;
-  color: #292C2D; }
+  color: #292C2D;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: font-size;
+  transition-property: font-size; }
 
 /*content-based breakpoints for responsive title text*/
 @media (min-width: 35.5em) {
@@ -722,7 +726,12 @@ header styles
   float: left;
   height: 10.2em;
   background-color: inherit;
-  border-bottom: 6px solid #EF3300; }
+  border-bottom: 6px solid #EF3300;
+  -webkit-transform: translateZ(0);
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-property: height;
+  transition-property: height; }
 
 @media (min-width: 48em) {
   #header {
@@ -797,8 +806,8 @@ navigation bar styles
     height: 0; } }
 /*transitions for reorientation*/
 #navbar {
-  -webkit-transition: height 0.13s;
-  transition: height 0.13s; }
+  /*-webkit-transition: height 0.13s;
+  transition: height 0.13s;*/ }
 
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar {
@@ -852,6 +861,7 @@ navigation bar styles
       font-size: 1.44em; } }
 /*stick-on-scroll for navigation menu*/
 .scroll-stick {
+  box-shadow: 1px 3px 5px 1px rgba(75, 70, 68, 0.39);
   position: fixed;
   top: 0;
   left: 0; }
@@ -902,8 +912,11 @@ navigation bar styles
 /*masonry item*/
 .item {
   float: left;
-  -webkit-transition: right .3s ease-in-out, top .3s ease-in-out;
-  transition: right .3s ease-in-out, top .3s ease-in-out; }
+  -webkit-transform: translateZ(0);
+  -webkit-transition-duration: .32s;
+  transition-duration: .32s;
+  -webkit-transition-property: left, right, top;
+  transition-property: left, right, top; }
 
 .body {
   background: #FFFEFC;

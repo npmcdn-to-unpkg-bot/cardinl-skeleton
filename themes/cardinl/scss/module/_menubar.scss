@@ -14,8 +14,8 @@ navigation bar styles
 }
 /*transitions for reorientation*/
 #navbar{
-   -webkit-transition: height 0.13s;
-   transition: height 0.13s;
+   /*-webkit-transition: height 0.13s;
+   transition: height 0.13s;*/
 }
 /*vertical-to-horizontal navigation-menu styles*/
 .menubar{
@@ -94,6 +94,7 @@ navigation bar styles
 }
 /*stick-on-scroll for navigation menu*/
 .scroll-stick{
+    box-shadow: 1px 3px 5px 1px rgba(75,70,68,0.39);
     position:fixed;
     top:0;
     left:0;

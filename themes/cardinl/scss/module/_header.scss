@@ -9,6 +9,10 @@ header styles
 	font-size: $h3-font-size;
 	font-family:$heading-font-stack;
 	color:$core-text-color;
+	-webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-property: font-size;
+    transition-property: font-size;
 }
 /*content-based breakpoints for responsive title text*/
 @media (min-width: 35.5em){
@@ -89,6 +93,11 @@ header styles
 	height:$header-height - 3.8;
 	background-color: inherit;
 	border-bottom:6px solid $core-accent;
+	-webkit-transform: translateZ(0);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: height;
+    transition-property: height;
 }
 
 @media (min-width: 48em){

@@ -1,8 +1,11 @@
 /*masonry item*/
 .item{
-	  float:left;
-    -webkit-transition: right .3s ease-in-out, top .3s ease-in-out;
-    transition: right .3s ease-in-out, top .3s ease-in-out;
+	float:left;
+	-webkit-transform: translateZ(0);
+    -webkit-transition-duration: .32s;
+    transition-duration: .32s;
+    -webkit-transition-property: left, right, top;
+    transition-property: left, right, top;
 }
 
 
