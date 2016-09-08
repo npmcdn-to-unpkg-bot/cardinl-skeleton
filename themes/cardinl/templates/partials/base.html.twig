@@ -20,8 +20,8 @@
     {{ assets.css() }}
     {% block javascripts %}
     {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js',117) %}
-    {% do assets.addJs('https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js',108) %}
-    {% do assets.addJs('https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js',108) %}
+    {% do assets.addJs('https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js',108) %}
+    {% do assets.addJs('https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js',108) %}
     {% do assets.addJs('theme://js/modernizr-custom.js',110) %}
     {% endblock %}
     {{ assets.js()}}
